@@ -286,14 +286,14 @@ em {
 }
 
 .chapter {
-  /*&:nth-child(even) {
+  /*&:nth-of-type(even) {
      background: $color1;
   }*/
 }
-.chapter:nth-child(odd) {
+.chapter:nth-of-type(odd) {
   background: #eafd89;
 }
-.chapter:nth-child(odd) + .chapter {
+.chapter:nth-of-type(odd) + .chapter {
   background: #8fe3ec;
 }
 .chapter h3, .chapter h4, .chapter h5 {
