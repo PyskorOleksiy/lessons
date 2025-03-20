@@ -244,16 +244,17 @@ em {
    }
 }
 .chapter {
-   /*&:nth-child(even) {
+   //Вибрати елемент того ж типу чи класу, nth-child - будь-який елемент
+   /*&:nth-of-type(even) {
       background: $color1;
    }*/
-   &:nth-child(odd) {
+   &:nth-of-type(odd) {
       background: $color2;
 
+      //Якщо поставити будь-який елемент між двома секціями, то він руйнує цю ГЕНІАЛЬНІСТЬ
       & + .chapter {
          background: $color1;
       }
-   }
 
    h3,h4,h5 {
       font-weight: 700;
