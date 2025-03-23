@@ -1,0 +1,317 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Merriweather:600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,regular,500,700&display=swap");
+@font-face {
+  font-family: "PF Din Text Pro";
+  src: url("../../../fonts/pf-dintext-pro/PFDinTextPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PF Din Text Pro";
+  src: url("../../../fonts/pf-dintext-pro/PFDinTextPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*Очищення всіх стилів браузерів*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  line-height: 1em;
+  background: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+button strong, a[class^=button] strong {
+  font-weight: inherit;
+}
+button em, a[class^=button] em {
+  font-style: inherit;
+}
+
+/*p, button, a[class^="button"] {
+	strong {
+		font-weight: inherit;
+	}
+	em {
+		font-style: inherit;
+	}
+}*/
+address {
+  font-style: normal;
+}
+
+/*--------------------*/
+body {
+  font-family: "PF Din Text Pro", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  font-style: inherit;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  margin-block: 0 20px;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+blockquote, q {
+  font-family: "Oswald", sans-serif;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #f54646;
+  text-shadow: 3px 3px 10px #f54646;
+}
+
+a[href="#"] {
+  color: red;
+}
+
+nav ul a[href="#"] {
+  color: #a79292;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #a79292;
+}
+
+img {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: red;
+  text-shadow: -4px -4px 7px #fff458;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+[class*=__container] {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.main-text {
+  font-size: 1.375rem;
+  line-height: 1.4;
+  text-indent: 1.5625rem;
+}
+
+.lead {
+  margin-block: 0 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  text-indent: 0;
+}
+
+.lead > p,
+.description__text > p {
+  margin-block: 0 24px;
+}
+.lead > p:last-of-type,
+.description__text > p:last-of-type {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.wavy {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+  text-underline-offset: 0.22em; /* 5/22 */
+}
+
+/*.negative {
+   //text-align: right;
+   //letter-spacing: -1.22em;
+   //transform: scaleX(-1);
+}*/
+.logo__text {
+  font-size: 1.5rem;
+  font-style: oblique;
+  color: gold;
+  text-transform: capitalize;
+}
+
+.nav__body > ul > li {
+  font-size: 24px;
+  color: #ff4a0e;
+}
+.nav__body > ul > li > ul > li {
+  color: #9044fa;
+}
+.nav__body > ul li {
+  cursor: pointer;
+}
+.nav__body > ul a {
+  color: inherit;
+}
+
+.hero__text {
+  font-size: 1.5rem;
+}
+
+.article {
+  padding: 5.208333% 0; /* 100/1920 */
+}
+.article a {
+  color: #16f70f;
+  text-decoration: underline;
+}
+
+.description__text {
+  margin-block: 0 24px;
+  line-height: 1.5;
+  color: #808080;
+}
+
+.chapter__body > section {
+  margin-block: 0 30px;
+}
+.chapter__body > section:last-of-type {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.figma-task {
+  font-family: "Poppins", sans-serif;
+}
+.figma-task__description .description__text {
+  font-size: 1.125rem;
+}
+.figma-task__description .description__text .lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.footer {
+  padding: 3.125% 0; /* 60/1920 */
+}
+
+.owner-name {
+  font-weight: 700;
+  color: #2e2cb1;
+}
