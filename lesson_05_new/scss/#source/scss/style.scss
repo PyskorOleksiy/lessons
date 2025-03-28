@@ -1,0 +1,399 @@
+@import "_fonts";
+@import "_nullstyle";
+
+
+//$fontSize: 16;
+//$baseWidth: 1920;
+$baseContainerWidth: 1170;
+$color1: #EE2918;
+$color2: rgba(255, 255, 255, 0.9);
+$color3: #201f1e;
+$color4: #000;
+
+
+%img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+%imgFixedDim {
+   width: 100%;
+	height: 100%;
+	object-position: center;
+	object-fit: cover;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+@mixin posAbsStandart {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+body {
+   font-family: "Old Standard TT", serif;
+}
+h1,h2,h3,h4 {
+   font-weight: 700; 
+}
+h1 {
+   margin: 0 0 10px;
+   font-size: 2.8125rem;
+}
+h2 {
+   font-size: 2.5rem;
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   overflow: hidden;
+}
+.header {
+   padding: 20px 0;
+   background: $color3;
+}
+.nav {
+
+   &__body {
+      &>ul {
+         li>a {
+            transition: color 0.3s;
+         }
+         li {
+            color: $color2;
+         }
+         li>a {
+            font-size: 1.25rem;
+            color: inherit;
+         }
+         &>li {
+            margin: 0 30px 0 0;
+            display: inline-block;
+            font-size: 0;
+
+            &:hover {
+               color: rgba(255, 255, 255, 0.72);
+            }
+         }
+      }
+   }
+}
+.main {
+   flex: 1 1 auto;
+}
+[class*="__container"] {
+   //padding-inline: 15px;
+   margin: 0 auto;
+   max-width: $baseContainerWidth + px;
+}
+.footer {
+   padding: 3.125% 0; /* 60/1920 */
+}
+.owner-name {
+   font-weight: 700;
+   color: #2e2cb1;
+}
+
+.hero {
+   padding: 5.982906% 0; /* 70/1170 */
+   background: $color1;
+}
+
+//!!!В адаптивність погрався лише з секцією .advantages
+$busColor1: #5A54F2;
+$busColor2: #fff;
+
+.advantages__title .title__subtitle,
+.cards__item .item__text {
+   font-family: "Montserrat", sans-serif;
+}
+.advantages {
+   padding: 5% 0 5.208333%; /* 100/1920 */
+   font-family: "Circular Std", sans-serif;
+   font-size: 0.875rem;
+   letter-spacing: 0.01428571em; /* 0.2/14 */
+   background: #231F8B;
+
+   /*strong {
+      font-weight: 400;
+   }*/
+   abbr {
+      cursor: pointer;
+      text-decoration: none;
+   }
+
+   &__container {
+      //padding-inline: 15px; //"відступи безпеки" - потрібно не забувати збільшувати max-width на padding-inline*2 
+      max-width: 1050px;
+   }
+
+   &__info {
+      margin: 0 0 6.666667%; /* 70/1050 */
+   }
+
+   &__title {
+      margin: 0 0 10px;
+      @include flex-column;
+
+      [class*="__subtitle"] {
+         margin: 0 0 10px;
+         color: $busColor1;
+         line-height: 1.71428571; // 24/14 
+      }
+      [class*="__title"] {
+         color: $busColor2;
+         font-size: 2.25rem;
+      }
+      //!!! Якщо тегу strong задати інший font-weight
+      /*[class*="__subtitle"], 
+      [class*="__title"] {
+         font-weight: 700;
+      }*/
+   }
+
+   &__text {
+      max-width: 72.857143%; /* 765/1050 */
+      color: $busColor2;
+      line-height: 1.42857143; /* 20/14 */
+
+      p {
+         margin-block: 0 10px;
+
+         &:last-child {
+            margin-block-end: 0;
+         }
+      }
+   }
+
+   @media (max-width: 1150px) {
+      &__container {
+         max-width: 900px;
+      }
+   }
+   @media (max-width: 1000px) {
+      &__container {
+         max-width: 750px;
+      }
+   }
+   @media (max-width: 850px) {
+      &__container {
+         max-width: 600px;
+      }
+      &__title {
+         [class*="__title"] {
+            font-size: 1.625rem;
+         }
+      }
+   }
+   @media (max-width: 650px) {
+      &__container {
+         padding-inline: 20px;
+         max-width: none;
+      }
+   }
+   @media (max-width: 600px) {
+      &__text {
+         max-width: none;
+      }
+   }
+   @media (max-width: 500px) {
+      &__title {
+         margin-bottom: 20px;
+
+         [class*="__title"] {
+            font-size: 1.25rem;
+         }
+      }
+   }
+   @media (max-width: 380px) {
+      &__container {
+         padding-inline: 12px;
+      }
+   }
+   @media (max-width: 365px) {
+      &__title {
+         [class*="__title"] {
+            font-size: 1.125rem;
+         }
+      }
+   }
+}
+
+.cards {
+   //margin: 0 auto;
+   //max-width: 1040px; /* 1040/1050 */  //для того, щоб зробити відступи по боках 5px - ТАКИЙ СПОСІБ НЕ РЕКОМЕНДУЄТЬСЯ!!!
+   overflow: hidden;
+
+   &__body {
+      //margin-inline - зсуваємо блок за межі батьківського щоб прибрати padding першої та останньої карточки, в кінці це робиться за допомогою overflow: hidden; 
+      //display: inline-block;
+      //text-align: center;
+      //margin: -1.904762%; 
+      padding: 0 5px;
+      margin-block: -1.904762%; /* 20/1050 */
+      margin-inline: -1.904762%;
+      //background: red; //для кращого розуміння поставити фон для батька карточок
+      /*display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      column-gap: 3.809524%; // 40/1050 
+      row-gap: 20px;*/
+      font-size: 0;
+      letter-spacing: 0; //не забути перевірити наявність letter-spacing
+   }
+
+   &__item {
+      //відступи між карточками роблю(імітую) за допомогою padding, відступ має бути 40px, то padding-inline - 20px, тоді padding сусідніх двох елементів додається і вийде - 40px 
+      //padding: 1.834862%;
+      padding-block: 1.851852%; 
+      padding-inline: 1.851852%; // 20/1080  1080, а не 1040 - бо треба враховувати від'ємні відступи для .cards__body 
+      display: inline-block;
+      width: 25%;
+      min-width: 270px;
+      max-width: 470px;
+      vertical-align: top;
+      //background: red;
+
+      &:nth-of-type(even) {
+         margin-top: 3.703704%; /* 40/1080 */
+      }
+   }
+
+   @media (max-width: 1150px) {
+      &__item {
+         width: 33.333%;
+
+         //останній і кожен 6-ий починаючи з 4-того
+         /*&:last-of-type:nth-of-type(6n + 4) { 
+            margin-top: 0;
+            //background: green;
+         }*/
+      }
+   }
+   @media (max-width: 1000px) {
+      &__body {
+         text-align: center;
+      }
+      /*&__item {
+         //width: 50%; 
+      }*/
+   }
+   @media (max-width: 600px) {
+      /*&__body {
+         text-align: center;
+      }*/
+      &__item {
+         //width: 100%; 
+         vertical-align: middle;
+         
+         &:nth-of-type(even) {
+            margin-top: 0; 
+         }
+      }
+   }
+}
+.item {
+   text-align: left;
+
+   &_spec {
+      .item__link {
+         background: $busColor1;
+         color: $busColor2;
+      }
+      .item__title [class*="__title"],
+      .item__text {
+         color: inherit; 
+      }
+      .item__title [class*="__title"]::after {
+         background: $busColor2;
+      }
+   }
+
+   &__link {
+      display: block;
+      padding: 15.217391% 17.391304%; // 40/230 не 270 - бо враховується лише ширина контентної частини(синя)
+      min-height: 260px;
+      background: $busColor2;
+      font-size: 0.875rem;
+      letter-spacing: 0.01428571em;
+   }
+
+   &__image {
+      margin: 0 0 20px;
+      width: 72px;
+      aspect-ratio: 1 / 1;
+
+      img {
+         @extend %imgFixedDim;
+         //object-fit: contain; //якщо ширина картинки більша за її висоту, то ширина картинки дорівнюватиме ширині батьківського блоку, а висота буде меншою висоти блоку, аналогічно у випадку більшої висоти; якщо пропорції картинки такі як пропорції блоку, наприклад, у обидвох - 1х1(ширина=висота) або блок - 400х200(2:1), а картинка - 50:25(2:1) - тоді картинка займе всю висоту і ширину блоку)
+      }
+   }
+
+   &__info {
+   }
+
+   &__title {
+      font-size: 1rem;
+      margin: 0 0 1.25em;
+
+      [class*="__title"] {
+         position: relative;
+         padding: 0 0 1.25em; /* 20/16 */
+         color: #252B42;
+         line-height: 1.5;
+         letter-spacing: 0.00625em; /* 0.1/16 */
+
+         &::after {       
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 3.125em; /* 50/16 */
+            height: 0.125em; /* 2/16 */
+            background: #E74040;
+         }
+      }
+   }
+
+   &__text {
+      color: #737373;
+      line-height: 1.42857;
+
+      p {
+         margin-block: 0 10px;
+
+         &:last-child {
+            margin-block-end: 0;
+         }
+      }
+   }
+}
+
+/*.some-block {
+   margin: 0 auto;
+   display: inline-block;
+   width: 500px;
+   height: 300px;
+   background: green;
+
+   div {
+      height: 100%;
+      background: red;
+   }
+}
+.other {
+}*/
+
+
+@import "_music";
+
+
