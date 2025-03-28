@@ -1,0 +1,85 @@
+.music {
+   padding: 3.645833% 0; /* 70/1920 */
+   background: $color1;
+
+   h2 {
+      margin: 0 0 0.75em; /* 30/40 */
+      color: $color2;
+   }
+   a {
+      font-weight: 700;
+   }
+
+   &__info {
+      margin: 0 0 4.273504%; /* 50/1170 */
+   }
+   &__link {
+      a {
+         font-size: 1.25rem;
+         color: $color4;
+         text-decoration: underline;
+         text-decoration-thickness: 0.15em; /* 3/20 */
+      } 
+   }
+   &__slider {
+   }
+}
+.slider {
+   overflow: hidden;
+
+   &__wrapper {
+      padding: 0 0 20px;
+      max-height: 500px;
+      margin-inline: -10px 0;
+      font-size: 0;
+      white-space: nowrap;
+      overflow: auto;
+      //background: green;
+   }
+
+   &__slide {
+      padding-inline: 10px;
+      display: inline-block;
+      vertical-align: top;
+      width: 33.333%;
+      min-width: 300px;
+
+      /*&:last-child {
+         padding-inline-end: 0;
+      }*/
+   }
+}
+.slide {
+   font-size: 1rem;
+
+   h3 {
+      margin: 0 0 20px;
+      font-size: 1.5625rem;
+   }
+
+   &__body {
+      padding: 20px;
+      min-height: 250px;
+      background: #fff;
+      border-radius: 5.429913% 0; /* 20/368.33 */
+   }
+
+   &__link {
+      margin: 0 0 20px;
+      
+      a {
+         color: $color1;
+      }
+   }
+
+   &__lyrics {
+      max-height: 100%;
+      white-space: pre-line;
+
+      cite {
+         display: inline-block;
+         margin: 20px 0 0;
+         font-weight: 700;
+      }
+   }
+}
