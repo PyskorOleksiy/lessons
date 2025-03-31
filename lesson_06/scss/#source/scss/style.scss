@@ -1,0 +1,111 @@
+@import "_fonts";
+@import "_nullstyle";
+
+
+//$fontSize: 16;
+//$baseWidth: 1920;
+$baseContainerWidth: 1200;
+$color1: #EE2918;
+$color2: rgba(255, 255, 255, 0.9);
+$color3: rgba(32, 31, 30, 0.9);
+$color4: #000;
+
+
+body {
+   font-family: "Old Standard TT", serif;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+}
+.header {
+   padding: 20px 0;
+   background: $color3;
+}
+.nav {
+
+   &__body {
+      &>ul {
+         /*li>a {
+            transition: color 0.3s;
+         }*/
+         li {
+            color: $color2;
+         }
+         li>a {
+            font-size: 1.25rem;
+            color: inherit;
+         }
+         &>li {
+            display: inline-block;
+            font-size: 0;
+
+            &:not(:last-child) {
+               margin-right: 30px;
+            }
+
+            /*&>ul {
+               font-size: 16px;
+
+               &>li:not(:last-child) {
+                  margin-bottom: 5px;
+               }
+            }*/
+         }
+      }
+   }
+}
+h1 {
+   font-size: 46px;
+   line-height: 1.2;
+   color: $color2;
+}
+h1,h2,h3,h4 {
+   font-weight: 700;
+}
+[class*="__container"] {
+   padding-inline: 15px;
+   margin: 0 auto;
+   max-width: $baseContainerWidth + px;
+}
+.main>.hero {
+   padding: 5.982906% 0; /* 70/1170 */
+   background: $color1;
+}
+
+@import "_ecobazar";
+@import "_hydra";
+
+.footer {
+   padding: 3.125% 0; /* 60/1920 */
+   font-family: "Circular Std", sans-serif;
+   background: $color3;
+
+   * {
+      color: $color2;
+   }
+   a[target] {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+   }
+   a[href^="mailto:"] {
+      color: $color1;
+   }
+
+   &__address {
+      margin: 0 0 20px;
+   }
+}
+.footer .address {
+   ul {
+      &>li:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+}
+.owner-name {
+   font-weight: 700;
+   color: #67b3ff;
+}
+
+
