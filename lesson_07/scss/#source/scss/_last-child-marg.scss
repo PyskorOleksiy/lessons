@@ -1,0 +1,10 @@
+.profiles__body, 
+.profiles .item__content, 
+.profiles .item__info,
+.best-faculty__body,
+.best-faculty__info {
+   & > *:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+   }
+}

@@ -1,0 +1,134 @@
+.profiles {
+   padding: 3.530093% 0 5.902778%; 
+   background: $busColor1;
+
+   &__body {
+      & > * {
+         margin-bottom: 35px;
+      }
+   }
+
+   [class*="__title"] {
+      margin: 0 0 31px;
+      
+      * {
+         color: $busColor3;
+      }
+
+      h3 {
+         &>* {
+            display: block;
+         }
+      }
+   }
+}
+.profiles .cards {
+   overflow: hidden;
+
+   &__body {
+      margin: -10px;
+      font-size: 0;
+      text-align: center;
+
+      & > * {
+         font-size: initial;
+         text-align: left;
+      }
+   }
+
+   &__item {
+      padding: 10px;
+      display: inline-block;
+      vertical-align: top;
+      width: 33.333%;
+      min-width: 310px;
+   }
+}
+.profiles .item {
+
+   &__body {
+      padding: 5.172556%; /* 20/386.656 */
+      min-height: 350px;
+      background: $busColor3;
+      transition: all 0.3s;
+
+      &:hover {
+         background: #FFBE48;
+         box-shadow: 0px 384px 108px 0px rgba(0, 0, 0, 0.00), 0px 246px 98px 0px rgba(0, 0, 0, 0.01), 0px 138px 83px 0px rgba(0, 0, 0, 0.05), 0px 62px 62px 0px rgba(0, 0, 0, 0.09), 0px 15px 34px 0px rgba(0, 0, 0, 0.10);
+      }
+   }
+
+   &__content {
+      & > * {
+         margin-bottom: 16px;
+      }
+   }
+
+   &__image {
+      position: relative;
+      //width: 100%;
+      padding: 0 0 76.657061%; /* 266/347 */
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__info {
+      & > * {
+         margin-bottom: 16px;
+      }
+   }
+
+   &__title {
+      
+      * {
+         font-size: 22px;
+         line-height: 1.22727273; /* 27/22 */
+         font-weight: 600;
+         color: #000;
+      }
+   }
+
+   &__text {
+      font-size: 15px;
+      line-height: 1.26666667; /* 19/15 */
+      color: $busColor2;
+
+      p:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__link {
+      font-size: 15px;
+      line-height: 1.26666667; /* 19/15 */
+
+      a {
+         color: #FE3F3F;
+         transition: all 0.3s;
+         //transition: font-size, color 0.3s;
+
+         &::first-letter {
+            text-transform: uppercase;
+         }
+         &:hover {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.8);
+         }
+         &:visited {
+            color: #a19f9f;
+         }
+         /*&:active {
+            transform: scale(0.5);
+         }*/
+      }
+   }
+}
+
+
