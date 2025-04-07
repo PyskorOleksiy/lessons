@@ -1,0 +1,121 @@
+.end {
+   width: 100%;
+   height: 100%;
+   font-size: 0;
+
+   & > * {
+      display: inline-block;
+      font-size: initial;
+   }
+
+   &__wasted {
+      width: 80%;
+      //background: $color1;
+
+      &:hover {
+         width: 100%;
+
+         & + .end__win {
+            display: none;
+         }
+         & ~ .down {
+            visibility: visible;
+
+            #dead {
+               visibility: visible;
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+            }
+         }
+      }
+   }
+
+   &__win {
+      width: 20%;
+      //background: $color2;
+
+      &:hover {
+         & ~ .down {
+            visibility: visible;
+
+            #winner {
+               visibility: visible;
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+            }
+            /*.wasted {
+               display: none;
+            }*/
+         }
+      }
+   }
+
+   &__wasted, &__win {
+      height: 5000px;
+      //height: 50%;
+   }
+
+   &__down {
+      width: 100%;
+      height: 62.50em; /* 1000/16 */
+   }
+}
+
+.down {
+   position: relative;
+   visibility: hidden;
+   background: $gameColor1;
+   //overflow: hidden;
+
+   &:hover {
+      visibility: visible;
+
+      //&__wasted, &__win - якщо до цього звертатись, то замість & буде підстановка - &:hover 
+      /*.wasted, .win {
+         visibility: visible;
+      }*/
+   }
+
+   &__var {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      &:hover {
+         visibility: visible;
+      }
+   }
+}
+
+
+.ending {
+
+   &__item {
+      &:target {
+         & + *:not(#epilogue) {
+            display: none;
+         }
+      }
+   }
+
+   &__item, #epilogue {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 15s;
+
+      &:target {
+         visibility: visible;
+         opacity: 1;
+      }
+   }
+}
+
