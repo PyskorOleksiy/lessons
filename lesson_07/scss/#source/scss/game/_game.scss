@@ -1,0 +1,72 @@
+$gameColor1: #82ff66;
+
+
+.game {
+   color: #fff;
+}
+
+.game, .play__hole {
+   background: rgb(133, 132, 132);
+}
+
+.process {
+   [id*="step"] {
+      padding: 20px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+
+      &:target {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
+   &__intro {
+      [id*="step"] {
+         transition: all 10s;
+      }
+   }
+
+   &__play {
+      display: none;
+      transition: all 0.3s;
+
+      &:target {
+         display: block;
+      }
+   }
+}
+
+[class*="__button"] {
+   padding: 10px 15px;
+   min-width: 100px;
+   color: $color2;
+   background: $color1;
+   border-radius: 20px;
+   text-align: center;
+   overflow: hidden;
+
+   &:hover {
+      background: rgb(255, 125, 55);
+      color: #fff;
+   }
+}
+.trgt-btn {
+   padding: 5px 10px;
+   color: rgba(255, 255, 255, 0.8);
+   background: rgb(48, 109, 56);
+   border-radius: 50%;
+
+   &:hover {
+      background: $color3;
+      color: #fff;
+   } 
+}
+.hover-btn {
+   display: block;
+
+   &__body {
+      display: block;
+   }
+}

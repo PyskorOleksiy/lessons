@@ -1,0 +1,41 @@
+//width: 1728px;
+$busColor1: #412672;
+$busColor2: #4F4F4F;
+$busColor3: #FFF;
+
+
+.business {
+   font-family: "Inter", sans-serif;
+
+   [class*="__container"] {
+      max-width: 1230px;
+   }
+   [class*="__title"] {
+      * {
+         font-size: 38px;
+         line-height: 1.21052632; /* 46/38 */
+         color: $busColor1;
+      }
+      h3 {
+         &>span:first-child {
+            font-weight: 400;
+         }
+      }
+   }
+
+   /*@media (max-width: 1300px) {
+      [class*="__container"] {
+         max-width: 1050px;
+      }
+   }
+   @media (max-width: 1130px) {
+      [class*="__container"] {
+         max-width: 950px;
+      }
+   }
+   @media (max-width: 1000px) {
+      [class*="__container"] {
+         max-width: 850px;
+      }
+   }*/
+}
