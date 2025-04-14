@@ -1,0 +1,13 @@
+.subscribe {
+   position: relative;
+   padding: 4.365079% 0 10.383598%; /* 157/1512 */
+
+   &::before {
+      background: url('../img/content/bg/world/world.avif');
+      filter: blur(1.649999976158142px);
+   }
+
+   &__title {
+      color: $rebelColor1;
+   }
+}
