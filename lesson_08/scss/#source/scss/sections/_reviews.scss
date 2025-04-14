@@ -1,0 +1,94 @@
+.reviews {
+   padding: 5.886243% 0 11.772487%; 
+
+   &__body {
+      font-size: 0;
+      text-align: center;
+
+      &>*:not([hidden]) {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+         text-align: left;
+      }
+   }
+   //!Додатковий контейнер для того, щоб вираховувати padding відносно ширини зображення, а не ширини блоку body
+   &__image-container {
+      margin: 0 9.912536% 0 0; /* 136/1372 */
+      width: 100%;
+      max-width: 557px;
+   }
+   &__image {
+      padding: 0 0 98.563734%; /* 549/557 */
+      position: relative;
+      border-radius: 26.929982% 0 / 27.322404% 0; /* 150/557 */ /* 150/549 */
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__blockquote {
+      padding: 18px 0 0;
+      width: 100%;
+      max-width: 676px;
+   }
+}
+
+.reviews .blockquote {
+
+   &__body {
+      &>* {
+         margin-bottom: 60px;
+      }
+   }
+
+   &__icon-container {
+      padding: 0 0 0 8px;
+      margin: 0 0 8.87574%; /* 60/676 */
+      width: 11.83432%; /* 80/676 */
+   }
+   &__icon {
+      position: relative;
+      padding: 0 0 80%; /* 64/80 */
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__blockquote {
+      &>* {
+         margin-bottom: 30px;
+      }
+
+      blockquote {
+         margin: 0 0 29px;
+         color: #484848;
+         font-size: 18px;
+         font-weight: 500;
+         line-height: 1.66667;
+
+         p:not(:last-child) {
+            margin: 0 0 6.508876%; /* 44/676 */
+         }
+      }
+      cite {
+         color: $rebelColor2;
+         font-size: 36px;
+         font-weight: 600;
+         font-style: normal;
+         line-height: 1.5;
+      }
+   }
+}
