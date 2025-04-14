@@ -1,0 +1,96 @@
+.stat {
+   position: relative;
+   text-align: center;
+   font-size: 0;
+   //align-content: center; //працює не лише з flex-, grid-контейнерами, а і display: block
+
+   &::before {
+      background: url('../img/content/bg/mountains/mountains.avif') center / cover no-repeat;
+      filter: blur(2.200000047683716px);
+   }
+
+   &::after {
+      content: '';
+      margin-right: -1px;
+      vertical-align: middle;
+      width: 1px;
+      //background: red;
+   }
+
+   &>* {
+      font-size: initial;
+   }
+
+   &__container {
+      padding-block: 50px;
+      display: inline-block;
+      vertical-align: middle;
+      //background: green;
+   }
+
+   &__body {
+      &>* {
+         margin-bottom: 30px;
+         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+   }
+
+   &__subtitle {
+      color: $rebelColor1;
+   }
+
+   &__title {
+      color: $rebelColor1;
+   }
+}
+.stat, 
+.stat::after {
+   min-height: 542px;
+}
+.stat .items {
+   //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+   overflow: hidden;
+
+   &__body {
+      margin: -4.446064%;
+      font-size: 0;
+      text-align: center;
+
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+         text-align: left;
+      }
+   }
+
+   &__item {
+      width: 25%;
+      padding: 4.082999%; /* 61/1494 */ 
+      min-width: 370px;
+   }
+}
+.stat .item {
+
+   &__content {
+      font-size: 0;
+      text-align: center;
+
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+      }
+   }
+
+   &__icon {
+      width: 104px;
+      height: 79px;
+
+      img {
+         max-width: 100%;
+         max-height: 100%;
+         //object-fit: contain;
+      }
+   }
+}
