@@ -1,0 +1,89 @@
+//Спробувати зробити фон через html без використання position
+
+.hero {
+   background: url('../img/content/bg/hero/2x.webp') center / cover no-repeat;
+   text-align: center;
+   color: $rebelColor1;
+   font-size: 0;
+
+   &::after {
+      content: '';
+      margin: -1px;
+      vertical-align: middle;
+      width: 1px;
+      //background: red;
+   }
+
+   &>* {
+      font-size: initial;
+   }
+
+   &__container {
+      padding-block: 150px 50px;
+      display: inline-block;
+      vertical-align: middle;
+      //background: green;
+   }
+
+   &__body {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      //! Таке звернення не працює для псевдоелементів, до них потрібно звертатись напряму
+      /*&>* {
+         display: inline-block;
+         vertical-align: middle;
+         font-size: initial;
+      }*/
+      &>* {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__title {
+      margin: 0 0 16px;
+   }
+
+   &__page-list {
+      font-size: 0;
+      line-height: 2.91667;
+
+      &>li {
+         display: inline-block;
+         font-size: 0;
+
+         &:not(:last-child) {
+            &::after {
+               width: 11px;
+               height: 18px;
+               background-image: url('../img/icons/arrow-right.svg');
+            }
+         }
+
+         &:not(:last-child),
+         &>a {
+            margin-right: 10px;
+            vertical-align: middle;
+         }
+      }
+   }
+
+   &__page-list>li>a, 
+   &__text {
+      font-size: 24px;
+      font-weight: 500;
+   }
+   &__text {
+      line-height: 1.5;
+
+      p:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+   &__blockquote {
+      font-size: 26px;
+   }
+}
+
+.hero, 
+.hero::after {
+   min-height: 860px;
+}

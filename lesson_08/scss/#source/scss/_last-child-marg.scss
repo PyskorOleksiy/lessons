@@ -1,0 +1,12 @@
+.header__body,
+.hero__content,
+.advantages .item__content,
+.reviews .blockquote__body,
+.reviews .blockquote__blockquote,
+.stat__body,
+.gallery__body {
+   & > *:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+   }
+}
