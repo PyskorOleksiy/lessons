@@ -1,0 +1,211 @@
+.short-article {
+   position: relative;
+
+   &::after {
+      width: 65px; 
+      height: 65px; 
+      z-index: 50;
+   }
+
+   &::before, 
+   &::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      border: 5px solid #FFBA49;
+   }
+
+   &:nth-of-type(odd) {
+      &::before {
+         top: 213px; 
+         left: -108px; 
+         width: 401px;
+         height: 401px;
+      }
+      &::after {
+         top: 168px; 
+         left: -128px; 
+      }
+
+      .short-article__info {
+         padding-top: 11.219512%; // 138/1230 
+      }
+   }
+   &:nth-of-type(even) {
+      text-align: right;
+
+      &::before {
+         width: 262px; 
+         height: 262px; 
+         top: -26px; 
+         right: -129px; 
+      }
+      &::after {
+         top: -48px; // -48/548 
+         right: 273px; // 92/430 
+      }
+
+      .short-article__info {
+         padding-top: 2.439024%; 
+      }
+   }
+
+   /*&:nth-of-type(odd) {
+      .short-article__image {
+         &::before {
+            bottom: -12.043796%; //-66/548 
+            left: -25.116279%; // -108/430 
+            width: 93.255814%; // 401/430 
+            height: 73.175182%; // 401/548 
+         }
+         &::after {
+            top: 30.656934%; // 168/548 
+            left: -29.767442%; // -128/430 
+         }
+      }
+      .short-article__info {
+         padding-top: 11.219512%; // 138/1230 
+      }
+   }
+   &:nth-of-type(even) {
+      text-align: right;
+
+      .short-article__image {
+         &::before {
+            width: 60.930233%; // 262/430 
+            height: 47.810219%; // 262/548 
+            top: -4.744526%; // -26/548 
+            right: -30%; // -129/430 
+         }
+         &::after {
+            top: -8.759124%; // -48/548 
+            left: 21.395349%; // 92/430 
+         }
+      }
+      .short-article__info {
+         padding-top: 2.439024%; 
+      }
+   }*/
+
+   &__body {
+      font-size: 0;
+      
+      &>* {
+         margin-right: 5.691057%; /* 70/1230 */
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+         text-align: left;
+      }
+   }
+
+   &__image {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+
+      &--shadow-dark-blue {
+         &>picture {
+            box-shadow: -25px 20px 44px 0px rgba(84, 48, 209, 0.40);
+         }
+      }
+      &--shadow-black {
+         &>picture {
+            box-shadow: 22px 42px 44px 0px rgba(0, 0, 0, 0.30);
+         }
+      }
+
+      /*&::after {
+         width: 15.116279%; // 65/430 
+         height: 11.861314%; // 65/548 
+         z-index: 15;
+      }
+
+      &::before, 
+      &::after {
+         content: '';
+         position: absolute;
+         border-radius: 50%;
+         border: 5px solid #FFBA49;
+      }*/
+
+      &>picture {
+         z-index: 10;
+
+         /*&::before {
+            content: '';
+            position: absolute;
+            bottom: -62.226277%; //-341/548 
+            left: -22.093023%; // -95/430 
+            width: 49.767442%; // 214/430 
+            height: 86.131387%; // 472/548 
+            background: red;
+            z-index: 12;
+         }*/
+      }
+
+      picture {
+         position: relative;
+         display: block;
+         padding-bottom: 127.44186%; /* 548/430 */
+         border-radius: 4.651163% / 3.649635%; 
+         overflow: hidden;
+
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+
+   &__effects-image {
+      position: absolute;
+      bottom: -23px;
+      left: 6.744186%; /* 29/430 */
+      right: 6.744186%; /* 29/430 */
+
+      picture {
+         padding-bottom: 127.419355%; /* 474/372 */
+         filter: blur(25px);
+         box-shadow: inset 0px -16px 23px rgba(255, 255, 255, 0.6);
+      }
+   }
+
+   &__info {
+      position: relative;
+      z-index: 100;
+
+      &>* {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__title {
+      font-family: "Circular Std", sans-serif;
+      margin: 0 0 13px;
+      font-size: 36px;
+      line-height: 1.27777778; /* 46/36 */
+      font-weight: 700;
+
+      strong {
+         display: block;
+      }
+   }
+
+   &__text {
+      margin: 0 0 39px;
+      max-width: 480px;
+      font-size: 18px;
+      line-height: 1.66666667; /* 30/18 */
+
+      &>*:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__link {
+   }
+}

@@ -1,0 +1,25 @@
+//$baseWidth: 1920;
+
+.pop-products {
+   //position: relative;
+   padding: 25px 0 30px;
+   font-family: "Poppins", sans-serif;
+   background: $ecoColor3;
+
+   /*&::after {
+      top: 99%;
+      bottom: -14.285714%; //-70/490 
+      border-radius: 10% 10% 50% 40%/0% 0% 100% 85%;
+   }*/
+
+   &__container {
+      max-width: 1320px;
+   }
+
+   &__body {
+      &>* {
+         margin-bottom: 32px;
+      }
+   }
+}
+
