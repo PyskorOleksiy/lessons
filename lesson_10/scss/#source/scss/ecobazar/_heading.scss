@@ -1,0 +1,26 @@
+.heading {
+
+   &__body {
+      font-size: 0;
+      text-align: justify;
+
+      &::after {
+         content: '';
+         width: 100%;
+      }
+      
+      &>* {
+         margin-right: 50px;
+         display: inline-block;
+         vertical-align: middle;
+         font-size: initial;
+      }
+   }
+
+   &__title {
+      color: $ecoColor1;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.2; 
+   }
+}
