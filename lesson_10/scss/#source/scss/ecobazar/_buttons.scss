@@ -9,7 +9,7 @@
 
       [class*="__body"] {
          &::after {
-            background: url('../img/ecobazar/icons/arrows/arrow_right/arrow-right-hover.svg') center / contain no-repeat;
+            background-image: url('../img/ecobazar/icons/arrows/arrow_right/arrow-right-hover.svg');
          }
       }
    }
@@ -19,7 +19,10 @@
          content: '';
          width: 15px;
          height: 12px;
-         background: url('../img/ecobazar/icons/arrows/arrow_right/arrow-right.svg') center / contain no-repeat;
+         background-image: url('../img/ecobazar/icons/arrows/arrow_right/arrow-right.svg');
+         background-position: center;
+         background-size: contain;
+         background-repeat: no-repeat;
       }
 
       &>* {
