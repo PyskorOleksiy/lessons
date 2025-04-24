@@ -1,0 +1,130 @@
+@import "_fonts";
+@import "_nullstyle";
+
+
+//$fontSize: 16;
+//$baseWidth: 1920;
+$baseContainerWidth: 1170;
+//$baseContainerWidth: 1402;
+$color1: #EE2918;
+$color2: rgba(255, 255, 255, 0.9);
+$color3: #262625;
+$color4: #74d7f0;
+$color5: #000;
+
+/*$rebelColor1: #fff;
+$rebelColor2: #000;
+$rebelColor3: #878787;*/
+
+$ecoColor1: #1A1A1A; 
+$ecoColor2: #00B207; 
+$ecoColor3: #fff;
+$ecoColor4: #F2F2F2;
+$ecoColor5: #2C742F;
+
+$busiColor1: #5A54F2;
+$busiColor2: #fff;
+
+
+body {
+   font-family: "Old Standart TT", serif;
+   font-size: 18px;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+}
+main>*:not(.short-docs),
+header,
+footer {
+   position: relative;
+   z-index: 20;
+}
+main {
+   &>*:not(.short-docs) {
+      &>* {
+         position: relative;
+         z-index: 15;
+      }
+   }
+}
+h1 {
+   font-size: 64px;
+   line-height: 1.09375; /* 70/64 */
+   font-weight: 700;
+   //text-align: center;
+}
+a {
+   &:focus-visible {
+      outline: 2px solid $color1;
+      outline-offset: 5px;
+   }
+}
+img {
+   align-content: center;
+   text-align: center;
+}
+/*abbr {
+   transition: all 0.3s;
+
+   &:hover {
+      color: $color1;
+   }
+}*/
+[class*="__container"] {
+   padding-inline: 15px;
+   margin: 0 auto;
+   max-width: $baseContainerWidth + px;
+   box-sizing: content-box;
+}
+[class*="__subtitle"] {
+   //color: $rebelColor3;
+   font-size: 36px;
+   font-weight: 500;
+   line-height: 1.2;
+   text-align: center;
+}
+[class*="__cards"] {
+   overflow: hidden;
+
+   &>[class*="__body"] {
+      font-size: 0;
+      
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;         
+      }
+   }
+}
+
+/*.pop-products::after, .advantages::before {
+   content: '';
+   position: absolute;
+   left: -5%;
+   right: -5%;
+   background: inherit;
+   z-index: 5;
+}
+.pop-products, .advantages {
+   &>* {
+      position: relative;
+      z-index: 1000;
+   }
+}*/
+
+
+@import "ecobazar/_heading";
+@import "ecobazar/_buttons";
+@import "business/_buttons";
+//@import "business/_images";
+
+@import "sections/_header";
+@import "sections/_hero";
+@import "ecobazar/_ecobazar";
+@import "ecobazar/_cards-products";
+@import "business/_business";
+@import "business/_short-article";
+@import "sections/_footer";
+
+@import "_last-child-marg";
