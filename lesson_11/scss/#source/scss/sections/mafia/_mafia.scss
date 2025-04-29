@@ -1,0 +1,27 @@
+$carLength: 583;
+$carHeight: 30.188679%;
+$bodyCarHeight: 85px;
+$bodyTopFrontHeight: calc($bodyCarHeight / 3.333px) + px; 
+//$bodyTopWidth: 206px;
+$carWidth: calc($carLength * 35 / 100) + px;
+$bodyTopWidth: calc($carWidth * 33.853211 / 100) + px;
+/*$translateVar: calc(0px - $carWidth + $bodyCarHeight);
+$translateHoodFrontVar: calc(0px - $carWidth + $bodyTopFrontHeight);*/
+
+.mafia {
+   padding: 50px 0;
+
+   &__container {
+   }
+
+   &__body {
+   }
+
+   &__car-wrapper {
+      //!Сумарні розміри автомобіля
+      //position: relative;
+      width: $carLength + px;
+   }
+   &__car {
+   }
+}

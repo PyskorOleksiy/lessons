@@ -1,0 +1,111 @@
+.car {
+   position: relative;
+   padding: 0 0 $carHeight; /* 176/583 */
+   background: green;
+
+   &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      perspective: 900px;
+   }
+
+   &__body-wrapper {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      //transform: translate(-50%,-50%) rotateY(30deg);
+      width: 93.48199%; /* 545/583 */
+      height: 48.295455%; /* 85/176 */
+      transform-style: preserve-3d;
+      perspective: 900px;
+   }
+
+   &__body {
+      position: absolute;
+      height: 100%;
+      transform-style: preserve-3d;
+      //perspective: 900px;
+      //box-shadow: 0 0 5px #000;
+
+      &--left,
+      &--right,
+      &--bottom {
+         /*top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);*/
+         width: 100%; 
+         height: 100%; 
+      }
+      &--front,
+      &--back {
+         width: $carWidth;
+         height: 70%;
+         top: none;
+         bottom: 0;
+         transform: rotateY(90deg);
+         transform-origin: left 50%;
+         box-shadow: 0 0 5px #000;
+         //background: rgb(112, 224, 243);
+      }
+      &--left,
+      &--right {
+         top: 0;
+         left: 0;
+         //border-radius: 70% 60% 0 0 / 70% 40% 0 0;
+         //background: red;
+         box-shadow: none;
+         //overflow: hidden;
+      }
+      &--left {
+      }
+      &--right {
+         transform: translateZ(-$carWidth) rotateY(180deg) scale(-1,1);
+      }
+      &--hood,
+      &--trunk {
+         top: 0; //!left, right не працюють без задання top 
+         left: 0;
+         //width: 37.798165%; /* 206/545 */
+         width: 33.853211%;
+         height: 30%;
+         box-shadow: none;
+         background: transparent;
+      }
+      &--trunk {
+         left: 100%;
+         transform: scale(-1,1);
+      }
+      &--bottom {
+         top: 100%;
+         height: $carWidth;
+         transform-origin: 50% bottom;
+         transform: translateY(-100%) rotateX(90deg);
+         box-shadow: 0 0 5px #000;
+      }
+      &--front {
+         //height: 50%;
+      }
+      &--back {
+         left: 100%;
+      }
+      &--cabin,
+      &--roof {
+         left: 50%;
+      }
+      &--cabin {
+         top: 0;
+         width: 32.293578%; /* 176/545 */
+         height: 100%;
+         translate: -50% 0;
+      }
+      &--roof {
+         translate: -50% -100%;
+         width: 37.247706%; /* 203/545 */
+         height: 47.058824%; /* 40/85 */
+      }
+   }
+}

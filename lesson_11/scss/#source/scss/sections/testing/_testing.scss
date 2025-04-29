@@ -1,0 +1,54 @@
+.testing {
+   padding: 50px 0 300px;
+
+   &__container {
+   }
+
+   &__body {
+
+      &>* {
+         margin-left: 100px;
+         margin-bottom: 50px;
+      }
+      
+      /*&>*:not(:last-child) {
+         margin-bottom: 50px;
+      }*/
+   }
+
+   &__cube {
+      margin: 0 auto 50px;
+      width: 500px;
+      height: 300px;
+      transform: rotateY(30deg);
+   }
+   &__windshield {
+      //margin: 0 auto;
+      width: 300px;
+      height: 300px;
+      //transform: rotateY(90deg);
+
+      &--dif-dims {
+         width: 300px;
+         height: 200px;
+         transform: rotateY(30deg);
+      }
+      &--deg90 {
+         width: 600px;
+         height: 200px;
+         transform: rotateY(20deg);
+      }
+   }
+   &__hexagon {
+      width: 300px;
+      height: 300px;
+   }
+   &__wheel {
+      width: 300px;
+      height: 300px;
+   }
+   &__triangle {
+   }
+}
+
+
