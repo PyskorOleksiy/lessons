@@ -1,0 +1,194 @@
+.windshield {
+   position: relative;
+   transform-style: preserve-3d;
+   perspective: 900px;
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //background: rgb(204, 204, 204, 0.3);
+      border: 3px solid #000;
+      transform-origin: 50% 50%;
+
+      &--front,
+      &--back,
+      &--bottom {
+         background: rgb(255, 0, 0, 0.3);
+      }
+      &--left,
+      &--right {
+         transform-origin: left 50%;
+         transform: rotateY(90deg);
+         border-left: none;
+         border-top: none;
+
+         &::before {
+            content: '';
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-right: 294px solid rgb(255, 0, 0, 0.3); //!не 300px, бо потрібно враховувати товщину border батьківського елемента + товщину border сусіда батьківського елемента
+            border-top: 294px solid transparent;
+         }
+      }
+      &--front {
+         top: 100%;
+         height: 141.666667%; /* 425/300 */
+         transform-origin: 0 bottom; //!Щоб побудувати об'ємний трикутник потрібно для однієї з сторін(яка буде в ролі нахиленої гіпотенузи) змінити transform-origin ось таким чином, висота для неї універсальна(якщо сторони рівні), найзручніше обрати саме передню сторону 
+         transform: translate(0,-100%) rotateX(45deg);
+      }
+      &--back {
+         transform: translateZ(-300px) rotateY(180deg);
+      }
+      &--bottom {
+         transform-origin: 50% bottom;
+         transform: rotateX(90deg);
+      }
+      &--left {
+
+         /*&::before {
+            transform: scale(-1,1);
+         }*/
+      }
+      &--right {
+         left: 100%;
+      }
+   }
+}
+.windshield-dif-dims {
+   position: relative;
+   transform-style: preserve-3d;
+   perspective: 900px;
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //background: rgb(204, 204, 204, 0.3);
+      border: 3px solid #000;
+      transform-origin: 50% 50%;
+
+      &--front,
+      &--back,
+      &--bottom {
+         background: rgba(0, 255, 76, 0.3);
+      }
+      &--left,
+      &--right {
+         width: 600px;
+         transform-origin: left 50%;
+         transform: rotateY(90deg);
+         border-left: none;
+         border-top: none;
+
+         &::before {
+            content: '';
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-right: 594px solid rgba(0, 255, 76, 0.3);
+            border-top: 194px solid transparent;
+         }
+      }
+      &--front {
+         top: 100%;
+         height: 632.46px; 
+         transform-origin: 0 bottom; //!Щоб побудувати об'ємний трикутник потрібно для однієї з сторін(яка буде в ролі нахиленої гіпотенузи) змінити transform-origin ось таким чином, висота для неї універсальна(якщо катети рівні), найзручніше обрати саме передню сторону 
+         transform: translate(0,-100%) rotateX(71.57deg); 
+         //!translate(0,-432.46px) = висота гіпотенузи(front) - висота протилежного катета(back) - вже не правильно, бо можна зробити це адаптивніше
+         //!rotateX(71.57deg) - ChatGPT порахував, що гіпотенуза нахилена під кутом 18.43 - не підійшло, замалий кут. Але все підходить, якщо 90deg - 18.43deg
+      }
+      &--back {
+         transform: translateZ(-600px) rotateY(180deg);
+      }
+      &--bottom {
+         top: 100%;
+         transform-origin: 50% bottom;
+         height: 600px;
+         transform: translate(0,-100%) rotateX(90deg);
+         //!translate(0,-400px) = висота bottom - висота протилежного катета(back) - вже не правильно, бо можна зробити це адаптивніше
+      }
+      &--left {
+
+         /*&::before {
+            transform: scale(-1,1);
+         }*/
+      }
+      &--right {
+         left: 100%;
+      }
+   }
+}
+.windshield-deg90 {
+   position: relative;
+   transform-style: preserve-3d;
+   perspective: 900px;
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //background: rgb(204, 204, 204, 0.3);
+      border: 3px solid #000;
+      transform-origin: 50% 50%;
+
+      &--front,
+      &--back,
+      &--bottom {
+         background: rgba(107, 215, 212, 0.3);
+      }
+      &--front,
+      &--back {
+         width: 300px;
+         transform: rotateY(90deg);
+         transform-origin: left 50%;
+      }
+      &--left,
+      &--right {
+         border-left: none;
+         border-top: none;
+
+         &::before {
+            content: '';
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-right: 594px solid rgba(107, 215, 212, 0.3);
+            border-top: 194px solid transparent;
+         }
+      }
+      &--front {
+         top: 100%;
+         height: 632.46px; 
+         transform-origin: 0 bottom; 
+         transform: translate(0,-100%) rotateZ(71.57deg) rotateY(90deg);
+      }
+      &--back {
+         left: 100%;
+      }
+      &--bottom {
+         top: 100%;
+         height: 300px;
+         transform-origin: 50% bottom;
+         transform: translateY(-100%) rotateX(90deg);
+      }
+      &--left {
+      }
+      &--right {
+         transform: translateZ(-300px);
+      }
+   }
+}
