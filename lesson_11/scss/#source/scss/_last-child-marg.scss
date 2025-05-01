@@ -1,0 +1,15 @@
+.header__body,
+.hero__content,
+.pop-products__body,
+.heading__body,
+.card-product__group-info,
+.short-docs__body,
+.short-article__body,
+.short-article__info,
+.footer__body,
+.contacts__body {
+   & > *:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+   }
+}
