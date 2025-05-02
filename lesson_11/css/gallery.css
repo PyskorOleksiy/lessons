@@ -1,0 +1,27 @@
+.gallery {
+  overflow: hidden;
+}
+.gallery__body {
+  margin: -30px;
+  font-size: 0;
+}
+.gallery__body > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: initial;
+}
+.gallery__image {
+  width: 50%;
+  padding: 30px;
+}
+.gallery__image picture {
+  padding-bottom: 30%;
+  position: relative;
+}
+.gallery__image picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
