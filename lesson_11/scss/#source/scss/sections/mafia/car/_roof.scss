@@ -1,0 +1,138 @@
+.roof {
+   transform-style: preserve-3d;
+   //transform: rotateY(90deg);
+
+   &__body {
+   }
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+   &__item--front,
+   &__item--back {
+      top: 100%;
+      width: $carWidth;
+      transform-origin: 0 bottom;
+      translate: 0 -100%;
+   }
+   &__item--left,
+   &__item--right {
+      /*border-left: 42px solid transparent;
+      border-right: 53px solid transparent;
+      border-bottom: 40px solid rgb(153, 234, 236, 0.3);*/
+      &>[class*="box"] {
+         &::after {
+            content: '';
+            width: 19.384236%; /* 39.35/203 */
+            height: 0;
+            //height: 100%;
+            border-right: 39.35px solid transparent;
+            border-bottom: 40px solid $carColor2;
+         }
+      }
+   }
+
+   &__item--left,
+   &__item--right {
+      &>[class*="box"]::after,
+      .big-window {
+         transform: translateX(-6.5px) skewX(17.97deg);
+      }
+   }
+   &__item--front {
+      height: 145%; /* 58/40 */
+      transform: rotateZ(46.4deg) rotateY(90deg);
+      border-top: 4px solid $winBorderColor;
+      border-bottom: 4px solid $winBorderColor;
+   }
+
+   &__item--back {
+      left: 100%;
+      height: 166%; /* 66.4/40 */
+      transform: rotateZ(-53deg) rotateY(90deg);
+      border: 16px solid $carColor2;
+   
+      [class*="__window"] {
+         border: 2px solid $winBorderColor;
+      }
+   }
+
+   &__item--top {
+      left: 20.689655%; /* 42/203 */
+      width: 53.20197%; /* 108/203 */ //!Ширина roof - сума border &__item--left, &__item--right = 108
+      height: $carWidth;
+      transform-origin: 50% top;
+      transform: rotateX(-90deg);
+      background: $carColor2;
+      box-shadow: 0 0 1px $carShadowColor;
+   }
+
+   &__item--left {
+   }
+
+   &__item--right {
+      transform: translateZ(-$carWidth);
+   }
+
+   &__box-item {
+      font-size: 0;
+      
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+      }
+   }
+   &__window {
+      width: 100%;
+      height: 100%; /* 38/40 */
+      background: $winColor;
+      //background: red;
+
+      &--left {
+         width: 0;
+         height: 0;
+         //width: 29.55665%; /* 55/203 */
+         border-left: 40px solid transparent;
+         border-right: 12px solid transparent;
+         border-bottom: 38px solid $winColor;
+         background: none;
+      }
+      
+      &--big {
+         width: 55%; /* 112/203 */
+      }
+      &--back {
+
+      }
+   }
+}
+.big-window {
+   //transform: translateX(-6.5px) skewX(17.97deg);
+   border-top: 2px solid $carColor2;
+   font-size: 0;
+
+   &__window {
+      height: 100%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: initial;
+      border-right: 4px solid $winBorderColor;
+      border-top: 4px solid $winBorderColor;
+
+      &:first-of-type {
+         width: 79%; 
+         border-left: 4px solid $winBorderColor;
+      }
+      &:nth-of-type(2) {
+         width: 21%; 
+         //border-top-right-radius: 15px;
+      }
+   }
+}
+//85.440613%; /* 223/261 */
+//50.666667%; /* 38/75 */
