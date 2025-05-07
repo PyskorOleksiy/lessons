@@ -1,0 +1,60 @@
+.wing {
+   transform-style: preserve-3d;
+
+   &__wrapper-rel {
+   }
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $carColor1;
+      @extend %shadow5px;
+      box-shadow: none;
+
+      &--front,
+      &--back {
+         transform-origin: left bottom;
+         width: 2.377239%; /* 5/210.328 */
+         box-shadow: 0 0 1px $carShadowColor;
+      }
+      &--left,
+      &--right {
+         background: none;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 210.328px solid transparent;
+            border-bottom: 42px solid $carColor1;
+         }
+      }
+      &--front {
+         top: auto;
+         bottom: 0;
+         height: 510.738095%; /* 214.51/42 */
+         transform: rotateZ(78.66deg) rotateY(90deg);
+      }
+      &--back {
+         left: 100%;
+         rotate: y 90deg;
+      }
+      &--bottom {
+         transform-origin: top;
+         top: 100%;
+         height: 11.904762%; /* 5/42 */
+         rotate: x -90deg;
+      }
+      &--left {
+      }
+      &--right {
+         transform: rotateY(180deg) translateZ(5px) scale(-1,1);
+      }
+   }
+}
