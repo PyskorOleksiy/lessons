@@ -1,0 +1,99 @@
+.car {
+   position: relative;
+   padding: 0 0 $carHeight; /* 176/583 */
+   font-family: "Circular Std", sans-serif;
+
+   [class*="__item"] {
+      position: absolute;
+   }
+
+   [class*="__rotate-"], 
+   &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   } 
+
+   &__rotate-deg180-mid:target {
+      .car__body-wrapper {
+         rotate: 0 1 0 180deg;
+      }
+   }
+   &__rotate-deg90-mid:target {
+      .car__body-wrapper {
+         rotate: 0 1 0 90deg;
+      }
+   }
+   &__rotate-deg90-back:target {
+      .car__body-wrapper {
+         rotate: 0 1 0 -90deg;
+      }
+   }
+   &__rotate-deg70-up:target {
+      .car__body-wrapper {
+         transform: rotateX(30deg) rotateY(70deg);
+      }
+   }
+   &__rotate-deg70-down:target {
+      .car__body-wrapper {
+         transform: rotateX(-30deg) rotateY(70deg);
+      }
+   }
+   &__rotate-deg70-back:target {
+      .car__body-wrapper {
+         transform: rotateX(-30deg) rotateY(-70deg);
+      }
+   }
+   &__rotate-deg30-mid:target {
+      .car__body-wrapper {
+         rotate: 0 1 0 30deg;
+      }
+   }
+
+   &__inner {
+      perspective: 900px; //!повертаємо &__body-wrapper, з яким автоматично повертається його зміст, отже perspective задаємо лише його батьку, а не йому самому
+   }
+
+   &__body-wrapper {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 50%;
+      translate: -50% -50%;
+      width: 93.48199%; /* 545/583 */
+      height: 48.295455%; /* 85/176 */
+      transform-style: preserve-3d; //!задаємо, щоб дочірні елементи стали об'ємними
+      font-size: 0;
+   }
+
+   &__body {
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+      font-size: initial;
+      
+      &--front,
+      &--back {
+         width: 33.853211%;
+      }
+      &--front {
+
+      }
+      &--cabin {
+         width: 32.293578%; /* 176/545 */
+      }
+      &--back {
+         
+      }
+      &--roof {
+         position: absolute;
+         top: 0;
+         left: 50%;
+         translate: -50% -100%;
+         width: 37.247706%; /* 203/545 */
+         height: 47.058824%; /* 40/85 */
+      }
+   }
+}

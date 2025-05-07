@@ -1,0 +1,286 @@
+[class*="__wheel"] {
+   position: absolute;
+   left: 0;
+   bottom: 0; 
+   width: 46.070461%; /* 85/184.5 */
+   height: 52.941176%; /* 45/85 */
+}
+
+.front,
+.cabin,
+.back {
+   position: relative;
+   transform-style: preserve-3d;
+}
+
+.front__item,
+.cabin__item,
+.back__item {
+   transform-style: preserve-3d;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   @extend %shadow5px;
+   box-shadow: none;
+}
+
+.front__item,
+.cabin__item,
+.back__item,
+.hood>[class*="__wrapper-rel"],
+.trunk>[class*="__wrapper-rel"] {
+   background: $carColor1;
+}
+
+.front__item--bottom,
+.cabin__item--bottom,
+.back__mid-bottom,
+.back__right-bottom {
+   background: $carColor3;
+}
+
+.front {
+   &__item {
+
+      &--front,
+      &--back {
+         transform-origin: left;
+         width: $carWidth;
+         rotate: y 90deg;
+      }
+      &--top,
+      &--bottom {
+      }
+      &--left,
+      &--right {
+         background: none;
+
+         &>[class*="__wrapper-rel"] {
+            &::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               border-top: 25.5px solid transparent;
+               border-right: 185px solid $carColor1;
+            }
+         }
+      }
+      &--front {
+         top: auto;
+         bottom: 0;
+         height: 70%; //59.5
+         box-shadow: 0 0 1px $carShadowColor;
+      }
+      &--back {
+         left: 100%;
+      }
+      &--top {
+         transform-origin: left top;
+         left: 100%;
+         width: $carWidth;
+         //height: 219.152941%; // 186.28/85 
+         height: 221.176471%; /* 188/85 */
+         transform: rotateZ(82.13deg) rotateY(90deg);
+         box-shadow: 0 0 1px $carShadowColor;
+         cursor: pointer;
+      }
+      &--bottom {
+         transform-origin: top;
+         top: 100%;
+         height: $carWidth;
+         rotate: x -90deg;
+      }
+      &--left {
+         
+      }
+      &--right {
+         transform: rotateY(180deg) translateZ($carWidth) scale(-1,1);
+      }
+   }
+   &__wheel {
+      left: 9.756098%; /* 18/184.5 */
+   }
+   &__headlight {
+      width: 12.352941%; 
+      aspect-ratio: 1 / 1;
+   }
+}
+.cabin {
+   &__item {
+      &--front,
+      &--back {
+         transform-origin: left;
+         width: $carWidth;
+         rotate: y 90deg;
+      }
+      &--left,
+      &--right {
+         background: none;
+
+         &>[class*="wrapper"] {
+            &>[class*="bg-item"] {
+               background: $carColor1;
+               clip-path: polygon(0% 0%, 0% 100%, 17% 100%, 17% 0, 83% 0, 83% 92%, 17% 92%, 17% 100%, 100% 100%, 100% 0%);
+            }
+         }
+      }
+      &--front {
+      }
+      &--back {
+         left: 100%;
+      }
+      &--bottom {
+         transform-origin: top;
+         top: 100%;
+         height: $carWidth;
+         rotate: x -90deg;
+      }
+      &--left {
+         z-index: 1000;
+      }
+      &--right {
+         transform: rotateY(180deg) translateZ($carWidth) scale(-1,1);
+      }
+   }
+   &__door {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,0);
+      width: 66%; // 134/203 
+      height: 92%; //78/85
+   }
+}
+.back {
+   &__item {
+      &--front,
+      &--back {
+         transform-origin: left;
+         width: $carWidth;
+         rotate: y 90deg;
+      }
+      &--top,
+      &--bottom {
+      }
+      &--left,
+      &--right {
+         background: none;
+
+         &>[class*="__wrapper-rel"] {
+            &::before,
+            &::after {
+               content: '';
+               position: absolute;
+               border-bottom: 22.016px solid transparent;
+            }
+            &::before {
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               border-top: 8.984px solid transparent;
+               border-left: 185px solid $carColor1;
+            }
+            &::after {
+               bottom: 0;
+               right: 0;
+               width: 52.596206%; /* 97.04/184.5 */
+               height: 85%;
+               border-left: 97.04px solid $carColor1;
+            }
+         }
+      }
+      &--front {
+         top: 10.588235%; /* 9/85 */
+         //bottom: 25.882353%; /* 22/85 */
+         left: 100%;
+         height: 63.529412%; /* 54/85 */
+         box-shadow: 0 0 1px $carShadowColor;
+      }
+      &--back {
+      }
+      &--top {
+         transform-origin: left top;
+         width: $carWidth;
+         height: 217.317647%; /* 184.72/85 */
+         transform: rotateZ(-87.21deg) rotateY(90deg);
+         box-shadow: 0 0 1px $carShadowColor;
+         cursor: pointer;
+      }
+      &--bottom {
+         transform-origin: top;
+         top: 100%;
+         height: $carWidth;
+         rotate: x -90deg;
+         background: none !important;
+      }
+      &--left {
+         
+      }
+      &--right {
+         transform: rotateY(180deg) translateZ($carWidth) scale(-1,1);
+      }
+   }
+   &__mid-bottom,
+   &__right-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      //@extend %shadow5px;
+   }
+   &__mid-bottom {
+      width: 48.780488%; /* 90/184.5 */
+   }
+   &__right-bottom {
+      transform-origin: left;
+      left: auto;
+      right: 0;
+      width: 52.596206%; /* 97.04/184.5 */
+      transform: rotateY(13.17deg);
+   }
+   &__wheel {
+   }
+   &__headlight {
+      width: 19.346734%; /* 77/398 */
+   }
+   &__numbers {
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translate(-50%,0);
+      min-width: 17.153499%; /* 35/204.04 */
+   }
+   &__wing {
+      position: absolute;
+      bottom: 90%;
+      right: 0;
+      width: 114%; 
+      height: 49.411765%; /* 42/85 */
+      transform: translate(2.1%,0) rotateZ(3.41deg) skewX(-10.41deg);
+   }
+}
+.hood,
+.trunk {
+   background: none;
+
+   &>[class*="__wrapper-rel"] {
+      transform-origin: top; 
+      transition: rotate 1s;
+   }
+}
+.hood:hover {
+   &>[class*="__wrapper-rel"] {
+      rotate: x -30deg;
+   }
+}
+.trunk:hover {
+   &>[class*="__wrapper-rel"] {
+      rotate: x 30deg;
+   }
+}
