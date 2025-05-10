@@ -1,0 +1,47 @@
+@keyframes car-move-to {
+	0% {
+      right: 0%;
+	}
+	100% {
+      right: 100%;
+		translate: 100% -28.409091%; /* 50/176 */
+	}
+}
+@keyframes wheel-rotate {
+	0% {
+		rotate: 0 0 1 0deg; //!якщо потрібно вказати rotate окремо при вже наявному translate, то краще задавати translate також окремо
+      //transform: translateX(-50%) rotateZ(0deg);
+	}
+	100% {
+		rotate: 0 0 1 -3600deg; //360(1 повний оберт * тривалість анімації)
+      //transform: translateX(-50%) rotateZ(360deg);
+	}
+}
+@keyframes door-open {
+	0% {
+		transform: rotateY(0deg);
+	}
+
+	10% {
+		transform: rotateY(-4deg); /* ледь відкрилися */
+		animation-timing-function: ease-out;
+	}
+
+	20% {
+		transform: rotateY(-4deg); /* пауза */
+	}
+
+	35% {
+		transform: rotateY(-15deg); /* ривок */
+		animation-timing-function: ease-in;
+	}
+
+	100% {
+		transform: rotateY(-80deg); /* повне відкриття */
+	}
+}
+@keyframes door-close {
+	100% {
+		transform: rotateY(0deg);
+	}
+}

@@ -1,0 +1,202 @@
+.roof {
+   transform-style: preserve-3d;
+   //transform: rotateY(90deg);
+
+   &__body {
+   }
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &--front,
+      &--back {
+         top: 100%;
+         width: $carWidth;
+         transform-origin: 0 bottom;
+         translate: 0 -100%;
+      }
+      &--left,
+      &--right {
+         /*border-left: 42px solid transparent;
+         border-right: 53px solid transparent;
+         border-bottom: 40px solid rgb(153, 234, 236, 0.3);*/
+         &>[class*="box"] {
+            &::after {
+               content: '';
+               width: 19.384236%; /* 39.35/203 */
+               height: 0;
+               //height: 100%;
+               border-right: 39.35px solid transparent;
+               border-bottom: 40px solid $carColor2;
+            }
+         }
+      }
+
+      &--left,
+      &--right {
+         &>[class*="box"]::after,
+         .big-window {
+            transform: translateX(-6.5px) skewX(17.97deg);
+         }
+      }
+      &--front {
+         height: 145%; /* 58/40 */
+         transform: rotateZ(46.4deg) rotateY(90deg);
+         border-top: 4px solid $winBorderColor;
+         border-bottom: 4px solid $winBorderColor;
+      }
+
+      &--back {
+         left: 100%;
+         height: 166%; /* 66.4/40 */
+         transform: rotateZ(-53deg) rotateY(90deg);
+         border: 16px solid $carColor2;
+      
+         [class*="__window"] {
+            border: 2px solid $winBorderColor;
+         }
+      }
+
+      &--top {
+         left: 20.689655%; /* 42/203 */
+         width: 53.20197%; /* 108/203 */ //!Ширина roof - сума border &__item--left, &__item--right = 108
+         height: $carWidth;
+         transform-origin: 50% top;
+         transform: rotateX(-90deg);
+         background: $carColor2;
+         box-shadow: 0 0 1px $carShadowColor;
+      }
+
+      &--left {
+      }
+
+      &--right {
+         transform: translateZ(-$carWidth);
+      }
+      &--rookie {
+         animation: get-out-car 4s 2s forwards,
+         close-door 4s 5.3s forwards;
+
+         .hand--left {
+            animation: hand-10degx 1s 2s forwards;
+         }
+         .hand--right {
+            animation: hand-50degx 2.5s 2s forwards,
+            rot-10deg-x 1s 8.3s;
+         }
+         .legs {
+            animation: stand-up 1.5s 4.5s forwards;
+         }
+         .leg--right {
+            animation: rot-min10deg-x 1s 8.3s forwards,
+            rot-0deg-x 1s 6.3s forwards;
+
+            .shin {
+               animation: bend-shin90deg 2s 2.5s forwards;
+            }
+         }
+         .leg--left {
+            animation: rot-45deg-x 1s 8.3s forwards;
+            
+            .shin {
+               animation: bend-shin90deg 2s 3.5s forwards,
+               rot-min45deg-x 1s 5.7s forwards,
+               rot-0deg-x 0.5s 8.3s forwards;
+            }
+         }
+      }
+   }
+
+   &__box-item {
+      font-size: 0;
+      
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+      }
+   }
+   &__window {
+      width: 100%;
+      height: 100%; /* 38/40 */
+      background: $winColor;
+      //background: red;
+
+      &--left {
+         width: 0;
+         height: 0;
+         //width: 29.55665%; /* 55/203 */
+         border-left: 40px solid transparent;
+         border-right: 12px solid transparent;
+         border-bottom: 38px solid $winColor;
+         background: none;
+      }
+      
+      &--big {
+         width: 55%; /* 112/203 */
+      }
+      &--back {
+
+      }
+   }
+}
+.big-window {
+   //transform: translateX(-6.5px) skewX(17.97deg);
+   border-top: 2px solid $carColor2;
+   font-size: 0;
+
+   &__window {
+      height: 100%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: initial;
+      border-right: 4px solid $winBorderColor;
+      border-top: 4px solid $winBorderColor;
+
+      &:first-of-type {
+         width: 79%; 
+         border-left: 4px solid $winBorderColor;
+      }
+      &:nth-of-type(2) {
+         width: 21%; 
+         //border-top-right-radius: 15px;
+      }
+   }
+}
+.roof .roof__item--rookie,
+.roof .roof__item--joe  {
+   //transform-origin: right;
+   height: 350%;
+   background: none;
+   //rotate: y -90deg;
+
+   .legs {
+      //transform-origin: top;
+      transform: translateZ(-$bodyDepth) rotateX(110deg);
+   }
+   .shin {
+      //transform: rotateX(-45deg);
+      rotate: x -45deg;
+   }
+}
+.roof .roof__item--rookie {
+   //translate: 150% $headMargTop*2 0-$bodyDepth*2.1;
+   transform: translate3d(150%,$headMargTop*2,0-$bodyDepth*2.1) rotateY(-90deg);
+
+   .hand {
+      //transform-origin: top;
+      translate: 0 0 0-$bodyDepth;
+      rotate: x 80deg;
+      //transform: translateZ(-$bodyDepth) rotateX(90deg);
+   }
+}
+.roof .roof__item--joe {
+   //translate: 150% $headMargTop*2 0-$carWidthPx+$bodyDepth*1.5;
+   transform: translate3d(150%,$headMargTop*2,0-$carWidthPx+$bodyDepth*1.5) rotateY(-90deg);
+}
+//85.440613%; /* 223/261 */
+//50.666667%; /* 38/75 */

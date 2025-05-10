@@ -1,0 +1,84 @@
+.houses {
+   &__body {
+   }
+   &__yard {
+      perspective: 900px;
+
+      &--angelo {
+         width: 20%;
+         aspect-ratio: 3 / 1;
+      }
+   }
+}
+.yard {
+   position: relative;
+   transform-style: preserve-3d;
+   //perspective: 900px;
+
+   &--angelo {
+      
+   }
+
+   &__wrapper-rel {
+
+   }
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @extend %shadow5px;
+
+      &--back {
+         transform: rotateY(180deg) translateZ($yardDepth) scale(-1,1);
+      }
+      &--bottom {
+         top: 100%;
+         height: $yardDepth;
+         transform-origin: top;
+         rotate: x -90deg;
+      }
+      &--tommy {
+         top: auto;
+         left: auto;
+         bottom: 10%;
+         right: 20%;
+         //transform: rotateY(-90deg);
+      }
+      &--rookie {
+         top: auto;
+         bottom: 10%;
+         left: 60%;
+         transform: rotateY(-90deg);
+
+         .legs {
+            //transform-origin: 50% 30%;
+            transform-origin: top;
+            //transform: translateY(-30%) rotateX(90deg);
+            //transform: translateZ(-$bodyDepth) rotateX(90deg);
+         }
+         .hand {
+            transform-origin: top;
+            //transform: translateZ(-$bodyDepth) rotateX(90deg);
+            translate: 0 0 0-$bodyDepth*0.1;
+            rotate: x 10deg;
+         }
+      }
+   }
+
+   &__body {
+   }
+
+   /*&__house {
+      width: 300px;
+      height: 300px;
+      background: red;
+   }*/
+}
+.house {
+
+   &__body {
+   }
+}

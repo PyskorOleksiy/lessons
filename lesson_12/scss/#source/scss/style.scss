@@ -1,0 +1,194 @@
+@import "_fonts";
+@import "_nullstyle";
+
+
+//$fontSize: 16;
+//$baseWidth: 1920;
+$baseContainerWidth: 1170;
+
+$color1: #EE2918;
+$color2: rgba(255, 255, 255, 0.9);
+$color3: #262625;
+$color4: #74d7f0;
+$color5: #000;
+
+/*$rebelColor1: #fff;
+$rebelColor2: #000;
+$rebelColor3: #878787;*/
+
+/*$ecoColor1: #1A1A1A; 
+$ecoColor2: #00B207; 
+$ecoColor3: #fff;
+$ecoColor4: #F2F2F2;
+$ecoColor5: #2C742F;*/
+
+/*$busiColor1: #5A54F2;
+$busiColor2: #fff;*/
+
+$mafiaColor1: #fff;
+
+/*------------CAR------------*/
+$carColor1: #da2616;
+$carColor2: #fff;
+$carColor3: #222823;
+$carColor4: rgb(148, 18, 18);
+$winBorderColor: #483E3F;
+$winColor: rgba(153, 234, 236, 0.3);
+$carShadowColor: #272020;
+
+/*---------PERSON-----------*/
+$tommyColor: #fff;
+$joeColor: rgb(146, 73, 28);
+$rookieColor: rgb(51, 133, 174);
+
+
+//CAR
+$carLength: 583;
+$carHeight: 30.188679%;
+$bodyCarHeight: 85px;
+$bodyTopFrontHeight: calc($bodyCarHeight / 3.333px) + px; 
+//$bodyTopWidth: 206px;
+$carWidth: calc($carLength * 35 / 100) + px;
+$carWidthPx: 204.04px;
+$wingsTranslateZ: calc(204.04 - 2) + px;
+$bodyTopWidth: calc($carWidth * 33.853211 / 100) + px;
+/*$translateVar: calc(0px - $carWidth + $bodyCarHeight);
+$translateHoodFrontVar: calc(0px - $carWidth + $bodyTopFrontHeight);*/
+
+//YARD
+$yardDepth: 600px;
+
+//PERSON 
+$personWidth: 50px;
+$personHeight: 170px;
+$headDepth: 16px;
+$headMargTop: 5%;
+$bodyDepth: 25px;
+$legsDepthKoef: 0.2;
+$limbDepth: 15px;
+
+//TEMPLATES
+%shadow5px {
+   box-shadow: 0 0 5px #000;
+}
+%shadow1px {
+   box-shadow: 0 0 1px #000;
+}
+
+
+body {
+   font-family: "Old Standart TT", serif;
+   font-size: 18px;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+}
+main>*:not(.short-docs),
+header,
+footer {
+   position: relative;
+   z-index: 20;
+}
+h1 {
+   font-size: 64px;
+   line-height: 1.09375; /* 70/64 */
+   font-weight: 700;
+   //text-align: center;
+}
+h2 {
+   font-size: 35px;
+}
+a {
+   &:focus-visible {
+      outline: 2px solid $color1;
+      outline-offset: 5px;
+   }
+}
+img {
+   align-content: center;
+   text-align: center;
+}
+/*abbr {
+   transition: all 0.3s;
+
+   &:hover {
+      color: $color1;
+   }
+}*/
+[class*="__container"] {
+   padding-inline: 15px;
+   margin: 0 auto;
+   max-width: $baseContainerWidth + px;
+   box-sizing: content-box;
+}
+[class*="__subtitle"] {
+   //color: $rebelColor3;
+   font-size: 36px;
+   font-weight: 500;
+   line-height: 1.2;
+   text-align: center;
+}
+[class*="__cards"] {
+   overflow: hidden;
+
+   &>[class*="__body"] {
+      font-size: 0;
+      
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;         
+      }
+   }
+}
+
+
+//-------------------ANIMATIONS-------------------//
+//CAR
+@import "sections/mafia/car/_animations";
+
+//STREET
+@import "sections/mafia/street/_animations";
+
+//PERSON 
+@import "sections/mafia/person/rookie/_animations";
+
+@import "sections/_header";
+@import "sections/_hero";
+
+//-------------------MAFIA-------------------//
+@import "sections/mafia/_buttons";
+@import "sections/mafia/_mafia";
+@import "sections/mafia/_gallery";
+
+//STREET
+@import "sections/mafia/street/_street";
+@import "sections/mafia/street/_yard";
+@import "sections/mafia/street/_road";
+
+//CAR
+@import "sections/mafia/car/_car";
+@import "sections/mafia/car/_body";
+@import "sections/mafia/car/_roof";
+@import "sections/mafia/car/_door";
+@import "sections/mafia/car/_wheel";
+@import "sections/mafia/car/_headlight";
+@import "sections/mafia/car/_wing";
+@import "sections/mafia/car/_numbers";
+
+//PERSON
+@import "sections/mafia/person/_person";
+
+//-------------------TESTING-------------------//
+@import "sections/testing/_testing";
+@import "sections/testing/_cube";
+@import "sections/testing/_triangle3d";
+@import "sections/testing/_hexagon";
+@import "sections/testing/_wheel";
+@import "sections/testing/_triangle";
+@import "sections/testing/_clippy";
+
+@import "sections/_footer";
+
+@import "_last-child-marg";
