@@ -1,0 +1,20 @@
+.car-buttons {
+   li {
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+   &__btn {
+      
+   }
+}
+.button {
+   padding: 10px;
+   background: $carColor1;
+   color: $carColor2;
+   border-radius: 10px;
+
+   &:hover {
+      box-shadow: 2px 2px 5px #000;
+   }
+}

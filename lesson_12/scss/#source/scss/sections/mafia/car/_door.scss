@@ -1,0 +1,69 @@
+.door {
+   transform-style: preserve-3d;
+   box-shadow: 0 0 3px #560A0A;
+   cursor: pointer;
+   //border-radius: 10.882353% 10.882353% 11.764706% 4.117647% / 40.638298% 40.638298% 21.276596% 21.276596%;
+
+   &:hover {
+      &>[class*="__wrapper-rel"] {
+         rotate: y -80deg;
+         transition: rotate 1.5s;
+      }
+   }
+
+   &__wrapper-rel {
+      transform-origin: left top;
+      background: $carColor1;
+   }
+
+   &__handle {
+      position: absolute;
+      top: 12.820513%; /* 10/78 */
+      right: 14.925373%; /* 20/134 */
+      width: 19.402985%; /* 26/134 */
+      height: 16.666667%; /* 13/78 */
+   }
+}
+.handle {
+
+   &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 120%;
+      transform: translate(-10%, 3%);
+      box-shadow: inset 0 0 5px #000;
+      border-radius: 50%;
+   }
+
+   &__inner {
+      position: relative;
+      height: 100%;
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         box-shadow: -1px 2px 2px #000;
+         background: #CCBEBB;
+      }
+
+      &::before {
+         top: 50%;
+         right: 0;
+         transform: translate(0,-50%);
+         width: 38.461538%; /* 10/26 */
+         height: 76.923077%; /* 10/13 */
+         border-radius: 50%;
+         overflow: hidden;
+      }
+      &::after {
+         top: 50%;
+         right: 20%; /* 10/26 */
+         transform: translate(0,-100%);
+         width: 80%;
+         height: 23.076923%; /* 3/13 */
+         border-radius: 40px / 40px;
+      }
+   }
+}
