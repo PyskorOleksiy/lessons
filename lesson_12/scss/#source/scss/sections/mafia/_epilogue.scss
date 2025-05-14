@@ -1,0 +1,84 @@
+.epilogue {
+   position: relative;
+   overflow: hidden;
+
+   &__body {
+   }
+   &__street {
+		//left: 100%;
+      width: 350%;
+      //width: 100%;
+		//translate: -100% 0;
+      //animation: street-move 10s ease-out forwards;
+	}
+   &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+}
+.overlay {
+   //padding: 3.645833% 0; /* 70/1920 */
+   visibility: hidden;
+   opacity: 0;
+   color: $mafiaColor1;
+
+   &--start {
+
+   }
+   &--end {
+      background: rgba(0, 0, 0, 0.8);
+      animation: standart-appearance 4s ease-out 82s forwards;
+   }
+   &__container {
+      max-width: 800px;
+      height: 100%;
+   }
+   &__wrapper-rel {
+      max-height: 100%;
+      overflow: hidden;
+   }
+   &__title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      font-size: 50px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-align: center;
+      align-content: center;
+      background: $mafiaColor2;
+      animation: standart-appearance 6s ease-in 136s forwards;
+
+      h3 {
+         visibility: hidden;
+         opacity: 0;
+         animation: standart-appearance 0.5s ease-out 142s forwards;
+
+         strong {
+            display: block;
+            text-decoration: line-through;
+         }
+      }
+   }
+   &__text {
+      position: relative;
+      top: 100%;
+      left: 0;
+      font-size: 30px;
+      line-height: 2.4;
+      animation: scroll-text 60s linear 82s forwards;
+      /*visibility: hidden;
+      opacity: 0;*/
+
+      p:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+}

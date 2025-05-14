@@ -1,0 +1,146 @@
+.houses {
+   &__body {
+   }
+   &__yard {
+      perspective: 600px;
+
+      &--angelo {
+         width: 25%;
+         aspect-ratio: 3 / 1;
+      }
+   }
+}
+.yard {
+   position: relative;
+   transform-style: preserve-3d;
+   //perspective: 100px;
+
+   &--angelo {
+   }
+
+   &__wrapper-rel {
+   }
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @extend %shadow5px;
+
+      &--back {
+         transform: rotateY(180deg) translateZ($yardDepth) scale(-1,1);
+         background: #f1dddd;
+      }
+      &--bottom {
+         top: 100%;
+         height: $yardDepth;
+         transform-origin: top;
+         rotate: x -90deg;
+         background: #228B22;
+      }
+      &--tommy {
+         top: auto;
+         left: auto;
+         bottom: 10%;
+         right: 35%;
+         transform: translateZ(0-$yardDepth*0.4) rotateY(-120deg);
+         animation: tommy-rot-0deg-y 2s 33s forwards,
+         tommy-rot-min30deg-y 0.5s linear 43.5s forwards,
+         tommy-throw-back 0.3s cubic-bezier(.13,1.28,.99,.88) 44.7s forwards,
+         tommy-fall 10s cubic-bezier(.28,.67,1,.21) 45s forwards;
+
+         .pers-body {
+            animation: rot-min25deg-x 0.3s linear 44.7s forwards;
+
+            &__part--front {
+               &>[class*="__wrapper-rel"] {
+                  &::before {
+                     animation: blood-leakage 10s ease-in 44.9s forwards;
+                  }
+               }
+            }
+         }
+         .hand {
+            &--left {
+               animation: shot-inertion-tommy-hand 0.3s linear 44.9s forwards,
+               l-hand-to-wound 0.5s ease-in-out 45.9s forwards;
+            }
+            &--right {
+               transform: rotateX(50deg);
+               animation: 2s to-water ease-in-out infinite alternate,
+               rot-0deg-x 0.5s linear 38s forwards,
+               r-hand-to-wound 0.2s ease-in-out 45s forwards;
+            }
+         }
+         .legs {
+            .leg {
+               &--right {
+                  animation: after-shot-tommy-leg 0.3s cubic-bezier(.02,1.1,.59,.35) 44.7s forwards;
+               }
+            }
+         }
+      }
+      &--rookie {
+         top: auto;
+         left: auto;
+         bottom: 15%;
+         right: 80%;
+         //transform: translateZ(0-$yardDepth*0.4) rotateY(-210deg);
+         //transform: rotateY(90deg);
+         //animation: walking-east 8.25s linear forwards; //!8.25s = 5кроків * 1.5s(тривалість 1 кроку) + 0.75s(затримка для лівої ноги)
+         transform-origin: bottom;
+         transform: rotateZ(20deg);
+         .head {
+            //transform: rotateY(50deg);
+         }
+         .pers-body {
+            transform: rotateX(-25deg);
+            //transform: rotateY(90deg);
+         }
+         .legs {
+            //transform-origin: 50% 30%;
+            transform-origin: top;
+            //transform: translateY(-30%) rotateX(90deg);
+            //transform: translateZ(-$bodyDepth) rotateX(90deg);
+            .leg--left {
+               //animation: walking-limb 1.5s linear 5 0.75s; //!затримка = половина одного кроку(1.5s)
+            }
+            .leg--right {
+               //animation: walking-limb 1.5s linear 5; //!кількість кроків - 5 = відстань яку треба пройти(translateX(1000%)) / 2 / 100
+               transform: rotateX(20deg);
+            }
+         }
+         .hand {
+            transform-origin: top;
+
+            &--left {
+               //animation: walking-limb 1.5s linear 5;
+               //transform: rotateX(70deg) rotateY(-50deg) rotateZ(-10deg);
+               //transform: translateZ(-25px) rotateX(90deg);
+               transform: rotateX(-10deg) rotateZ(20deg);
+            }
+            &--right {
+               //animation: walking-limb 1.5s linear 5 0.75s;
+               //transform: rotateX(90deg);
+               transform: rotateX(10deg) rotateZ(40deg);
+            }
+         }
+      }
+   }
+
+   &__body {
+   }
+
+   /*&__house {
+      width: 300px;
+      height: 300px;
+      background: red;
+   }*/
+}
+.house {
+
+   &__body {
+   }
+}

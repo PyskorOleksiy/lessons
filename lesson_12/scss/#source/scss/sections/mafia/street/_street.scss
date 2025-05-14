@@ -1,0 +1,61 @@
+.street {
+	position: relative;
+	background: #87CEEB;
+
+	&__body {
+	}
+
+	&__sun {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2.97619%; /* 200/6720 */
+		transform: translate(-20%,-20%);
+
+		&>[class*="__wrapper-rel"] {
+			padding-bottom: 100%; /* 100/100 */
+		}
+	}
+
+	&__houses {
+   }
+
+	&__road {
+		height: 300px;
+		//transform-style: preserve-3d;
+		//rotate: x 50deg;
+	}
+}
+.sun {
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 0 30px rgb(255, 251, 0),
+	0 0 30px rgb(255, 251, 0);
+	animation: sunlight 4s infinite alternate forwards;
+
+	/*&:hover {
+		animation-play-state: paused;
+	}*/
+
+	&__wrapper-rel {
+		&::after,
+		&>picture {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&::after {
+			content: '';
+			background: rgba(255, 247, 10, 0.8);
+		}
+		&>picture {
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

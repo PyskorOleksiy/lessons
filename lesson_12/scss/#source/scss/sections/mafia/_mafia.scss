@@ -1,0 +1,110 @@
+[class*="__wrapper-rel"],
+[class*="__box-item"] {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transform-style: preserve-3d;
+}
+[class*="--3d"] {
+   transform-style: preserve-3d;
+}
+[class*="__bg-item"] {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.mafia {
+   padding: 50px 0;
+   background: #ccc;
+
+   &__container {
+      padding: 0;
+      max-width: none;
+   }
+
+   &__body {
+      &>* {
+         margin-bottom: 40px;
+      }
+   }
+   &__blockquote {
+      
+   }
+   &__car-review {
+   }
+   &__car {
+   }
+   &__gallery {
+   }
+   &__epilogue {
+
+   }
+}
+.blockquote {
+   padding: 100px 0;
+   font-family: "Poppins", sans-serif;
+   font-size: 28px;
+   line-height: 1.2;
+   font-weight: 700;
+   background: $mafiaColor2;
+   color: $mafiaColor1;
+
+   &__body {
+      margin: 0 auto;
+      max-width: 576px;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      animation: quote-appearance 40s linear infinite alternate; 
+
+      &>* {
+         margin-bottom: 30px;
+      }
+   }
+
+   figcaption {
+      padding: 0 0 0 30%;
+      font-size: 22px;
+   }
+   cite {
+      font-style: normal;
+   }
+}
+.review {
+   padding: 50px 0;
+
+   &__car-wrapper {
+      //!Сумарні розміри автомобіля
+      margin-left: auto;
+      margin-right: auto;
+      //width: $carLength + px;
+      width: 49.82906%; /* 583/1170 */
+      width: 583px;
+
+      .wheel__main-wrapper,
+      .cabin__item .door>[class*="__wrapper-rel"] {
+         animation: none;
+      }
+   }
+   .car__body-wrapper {
+      animation: car-rotate 30s linear infinite;
+
+      &:hover {
+         animation-play-state: paused;
+      }
+   }
+}
+.car-info {
+
+   &__body {
+   }
+
+   &__title {
+      font-size: 25px;
+   }
+
+   &__text {
+   }
+}

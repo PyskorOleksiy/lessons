@@ -1,0 +1,302 @@
+.roof {
+   transform-style: preserve-3d;
+   //transform: rotateY(90deg);
+
+   &__body {
+   }
+
+   &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &--front,
+      &--back {
+         top: 100%;
+         width: $carWidth;
+         transform-origin: 0 bottom;
+         translate: 0 -100%;
+      }
+      &--left,
+      &--right {
+         /*border-left: 42px solid transparent;
+         border-right: 53px solid transparent;
+         border-bottom: 40px solid rgb(153, 234, 236, 0.3);*/
+         &>[class*="box"] {
+            &::after {
+               content: '';
+               width: 19.384236%; /* 39.35/203 */
+               height: 0;
+               //height: 100%;
+               border-right: 39.35px solid transparent;
+               border-bottom: 40px solid $carColor2;
+            }
+         }
+      }
+
+      &--left,
+      &--right {
+         &>[class*="box"]::after,
+         .big-window {
+            transform: translateX(-6.5px) skewX(17.97deg);
+         }
+      }
+      &--front {
+         height: 145%; /* 58/40 */
+         transform: rotateZ(46.4deg) rotateY(90deg);
+         border-top: 4px solid $winBorderColor;
+         border-bottom: 4px solid $winBorderColor;
+      }
+
+      &--back {
+         left: 100%;
+         height: 166%; /* 66.4/40 */
+         transform: rotateZ(-53deg) rotateY(90deg);
+         border: 16px solid $carColor2;
+      
+         [class*="__window"] {
+            border: 2px solid $winBorderColor;
+         }
+      }
+
+      &--top {
+         left: 20.689655%; /* 42/203 */
+         width: 53.20197%; /* 108/203 */ //!Ширина roof - сума border &__item--left, &__item--right = 108
+         height: $carWidth;
+         transform-origin: 50% top;
+         transform: rotateX(-90deg);
+         background: $carColor2;
+         box-shadow: 0 0 1px $carShadowColor;
+      }
+
+      &--left {
+      }
+
+      &--right {
+         transform: translateZ(-$carWidth);
+      }
+      &--rookie {
+         animation: get-out-car-rookie 4s 12s forwards,
+         close-door-rookie 4s 16s forwards,
+         rookie-goes-to-tommy 12s linear 20s forwards,
+         rookie-rotate-to-car 0.1s linear 66s forwards;
+         //rookie-goes-to-car 4.8s linear 62s forwards;
+         //walking-east 6.75s linear 10s forwards,
+         //walking-north 5.25s linear 16.75s forwards;
+
+         .hand {
+            animation: hand-of-the-wheel 1s 12s forwards;
+
+            &--left {
+               animation: rot-10deg-x 1s 12s forwards,
+               rot-0deg-x 0.5s 19s forwards,
+               //walking-limb 1.5s linear 7 20.75s,
+               //walking-limb 1.5s linear 3 27.5s,
+               walking-limb 0.6s linear 50 73.3s;
+               //walking-limb 0.6s linear 4 68s;
+            }
+            &--right {
+               animation: hand-50degx 2.5s 12s forwards,
+               rot-50deg-x 1s 18.3s,
+               walking-limb 1.5s linear 8 20s,
+               //walking-limb 1.5s linear 3 26.75s,
+               walking-limb 0.6s linear 50 73s;
+               /*walking-limb 0.6s linear 3 62s,
+               walking-limb 0.6s linear 4 66.8s;*/
+            }
+         }
+         .legs {
+            animation: stand-up 1.5s 14.5s forwards;
+         }
+         .leg--right {
+            animation: rot-min20deg-x 1s 14.5s forwards,
+            rot-0deg-x 1s 16.3s forwards,
+            walking-limb 1.5s linear 8 20s,
+            //walking-limb 1.5s linear 3 26.75s,
+            walking-limb 0.6s linear 50 73s;
+            /*walking-limb 1.5s linear 3 62s,
+            walking-limb 1.5s linear 4 67.25s;*/
+
+            .shin {
+               animation: bend-shin90deg 2s 12.5s forwards;
+            }
+         }
+         .leg--left {
+            animation: rot-45deg-x 1s 15s forwards,
+            rot-0deg-x 0.5s 16.3s forwards,
+            walking-limb 1.5s linear 7 20.75s,
+            //walking-limb 1.5s linear 3 27.5s,
+            walking-limb 0.6s linear 50 73.3s;
+            /*walking-limb 1.5s linear 3 62.75s,
+            walking-limb 1.5s linear 4 68s;*/
+
+            
+            .shin {
+               animation: bend-shin90deg 2s 13.5s forwards,
+               rot-min45deg-x 1s 15s forwards,
+               rot-0deg-x 0.5s 16.3s forwards;
+            }
+         }
+      }
+      &--joe {
+         animation: get-out-car-joe 4s 14s forwards,//затримка 2s
+         joe-goes-to-tommy 6.5s linear 19s forwards,
+         joe-rotate-to-car 10s linear 66s forwards;
+         //joe-goes-to-car 6.5s linear 63s forwards; 
+
+         .hand {
+            animation: hand-of-the-wheel 1s 14s forwards;
+
+            &--left {
+               animation: hand-50degx 3.5s 12s forwards,
+               walking-limb 1.5s linear 4 19.75s,
+               joe-shot-tommy 1s linear 43s forwards,
+               gunshot-recoil 0.2s cubic-bezier(.07,1.23,.64,.37) 44.5s,
+               joe-hide-gun 1s linear 45.2s forwards,
+               walking-limb 0.6s linear 50 73.3s;
+               //joe-shot-tommy 1s linear 33s forwards;
+               //rot-100deg-x 1s 15.5s forwards;
+
+               .gun {
+                  animation: gun-visibility 0.2s 43.5s forwards,
+                  gun-visibility 0.2s reverse 45.7s forwards;
+
+                  [class*="__wrapper-rel"] {
+                     &::after {
+                        animation: shot-flash 0.2s alternate 44.5s;
+                     }
+                  }
+               }
+            }
+            &--right {
+               animation: rot-min50deg-x 1s 18s,
+               walking-limb 1.5s linear 4 19s,
+               walking-limb 0.6s linear 50 73s;
+            }
+         }
+         .legs {
+            animation: stand-up 1.5s 16.5s forwards;
+         }
+         .leg--right {
+            animation: rot-min20deg-x 1s 16.5s forwards,
+            rot-0deg-x 1s 18.3s forwards,
+            walking-limb 1.5s linear 4 19s,
+            walking-limb 0.6s linear 50 73s;
+
+            .shin {
+               animation: bend-shin90deg 2s 14.5s forwards;
+            }
+         }
+         .leg--left {
+            animation: rot-45deg-x 1s 17s forwards,
+            rot-0deg-x 0.5s 18.3s forwards,
+            walking-limb 1.5s linear 4 19.75s,
+            walking-limb 0.6s linear 50 73.3s;
+
+            
+            .shin {
+               animation: bend-shin90deg 2s 15.5s forwards,
+               rot-min45deg-x 1s 17s forwards,
+               rot-0deg-x 0.5s 18.3s forwards;
+            }
+         }
+      }
+      &--girl {
+         visibility: hidden;
+         animation: girl-appearance 5s reverse 55s forwards;
+      }
+   }
+
+   &__box-item {
+      font-size: 0;
+      
+      &>* {
+         display: inline-block;
+         vertical-align: top;
+         font-size: initial;
+      }
+   }
+   &__window {
+      width: 100%;
+      height: 100%; /* 38/40 */
+      background: $winColor;
+      //background: red;
+
+      &--left {
+         width: 0;
+         height: 0;
+         //width: 29.55665%; /* 55/203 */
+         border-left: 40px solid transparent;
+         border-right: 12px solid transparent;
+         border-bottom: 38px solid $winColor;
+         background: none;
+      }
+      
+      &--big {
+         width: 55%; /* 112/203 */
+      }
+      &--back {
+
+      }
+   }
+}
+.big-window {
+   //transform: translateX(-6.5px) skewX(17.97deg);
+   border-top: 2px solid $carColor2;
+   font-size: 0;
+
+   &__window {
+      height: 100%;
+      display: inline-block;
+      vertical-align: top;
+      font-size: initial;
+      border-right: 4px solid $winBorderColor;
+      border-top: 4px solid $winBorderColor;
+
+      &:first-of-type {
+         width: 79%; 
+         border-left: 4px solid $winBorderColor;
+      }
+      &:nth-of-type(2) {
+         width: 21%; 
+         //border-top-right-radius: 15px;
+      }
+   }
+}
+.roof .roof__item--rookie,
+.roof .roof__item--joe,
+.roof .roof__item--girl  {
+   //transform-origin: right;
+   height: 350%;
+   background: none;
+   //rotate: y -90deg;
+
+   .legs {
+      //transform-origin: top;
+      transform: translateZ(-$bodyDepth) rotateX(110deg);
+   }
+   .shin {
+      //transform: rotateX(-45deg);
+      rotate: x -45deg;
+   }
+}
+.roof .roof__item--rookie,
+.roof .roof__item--girl {
+   //translate: 150% $headMargTop*2 0-$bodyDepth*2.1;
+   transform: translate3d(150%,$headMargTop*2,0-$bodyDepth*2.1) rotateY(-90deg);
+
+   .hand {
+      //transform-origin: top;
+      /*translate: 0 0 0-$bodyDepth;
+      rotate: x 80deg;*/
+      transform: translateZ(-$bodyDepth) rotateX(80deg);
+   }
+}
+.roof .roof__item--joe {
+   //translate: 150% $headMargTop*2 0-$carWidthPx+$bodyDepth*1.5;
+   transform: translate3d(150%,$headMargTop*2,0-$carWidthPx+$bodyDepth*1.5) rotateY(-90deg);
+}
+//85.440613%; /* 223/261 */
+//50.666667%; /* 38/75 */
