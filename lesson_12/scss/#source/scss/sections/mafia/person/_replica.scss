@@ -1,0 +1,38 @@
+.replica {
+   //backface-visibility: hidden;
+   font-size: 22px;
+   line-height: 1.2;
+   transform-style: preserve-3d;
+
+   &__body {
+      //max-width: 400px;
+      transform-style: preserve-3d;
+   }
+   &__text {
+      will-change: transform;
+      backface-visibility: hidden;
+      width: max-content;
+      max-width: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      padding: 10px;
+      border-radius: 10px;
+      background: $mafiaColor1;
+      overflow: hidden;
+
+      p {
+         display: inline-block;
+
+         &:not(:last-child) {
+            margin-bottom: 10px;
+         }
+
+         img {
+            width: 1.5em;
+            aspect-ratio: 1 / 1;
+         }
+      }
+   }
+}
