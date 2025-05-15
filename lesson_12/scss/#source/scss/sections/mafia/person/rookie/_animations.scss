@@ -1,0 +1,92 @@
+/*------------------PERSON------------------*/
+/*--------------GET OUT OF THE CAR-------------*/
+@keyframes get-out-car-rookie {
+	/*0% {
+		transform: translate3d(150%,$headMargTop*2,0-$bodyDepth*2.1) rotateX(0deg) rotateY(-90deg);
+	}*/
+   12.5% { //0.5s 
+		transform: translate3d(150%,$headMargTop*2,0) rotateX(-30deg) rotateY(-90deg); //нагнувся, -90deg - повернутий в бік руля
+	}
+	37.5% { //1.5s
+		transform: translate3d(150%,$headMargTop*2,0) rotateX(0deg) rotateY(-65deg); //крутиться до виходу
+	}
+	62.5% { //2.5s
+		transform: translate3d(150%,$headMargTop*2,0) rotateX(-20deg) rotateY(-45deg); //ще раз нагнувся та ще більше покрутився в бік виходу
+	}
+	100% {
+		height: $personHeight;
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth*$getOutCarKoef) rotateX(0deg) rotateY(45deg); //повністю повернутий в бік виходу, а в процесі виходу повернувся вправо на 45deg
+	}
+}
+@keyframes close-door-rookie {
+	/*25% {
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth) rotateX(0deg) rotateY(45deg);
+	}*/
+	/*50% {
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth) rotateY(45deg) rotateX(-5deg);
+	}*/
+	70%,
+	80% {
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth*3.5) rotateY(-180deg) rotateX(0deg);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth*3.5) rotateY(-270deg) rotateX(0deg);
+	}
+}
+/*------------------WALKING---------------------*/
+@keyframes walking-east {
+	100% {
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-270deg) rotateX(0deg);
+	}
+}
+@keyframes walking-north {
+	0% {
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-360deg) rotateX(0deg);
+	}
+	100% {
+		transform: translate3d(800%,-50%,$bodyDepth) rotateY(-360deg) rotateX(0deg);
+	}
+}
+@keyframes rookie-goes-to-tommy { //12s
+	0% {
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth*3.5) rotateY(-270deg) rotateX(0deg);
+	}
+	56.25% { //6.75s
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-270deg) rotateX(0deg);
+	}
+	56.26% {
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-180deg) rotateX(0deg);
+	}
+	100% { //5.25s
+		transform: translate3d(800%,-50%,$bodyDepth) rotateY(-180deg) rotateX(0deg);
+	}
+}
+@keyframes rookie-goes-to-car { //12s
+	0% {
+		transform: translate3d(800%,-50%,$bodyDepth) rotateY(0deg) rotateX(0deg);
+	}
+	43.74% { //2.1s
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(0deg) rotateX(0deg);
+	}
+	43.75% {
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-90deg) rotateX(0deg);
+	}
+	100% { //2.7s
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth*3.5) rotateY(-90deg) rotateX(0deg);
+	}
+	/*43.74% { //6.75s
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-360deg) rotateX(0deg);
+	}
+	43.75% {
+		transform: translate3d(800%,$headMargTop*2,$bodyDepth*3.5) rotateY(-270deg) rotateX(0deg);
+	}
+	100% { //5.25s
+		transform: translate3d(150%,$headMargTop*2,$bodyDepth*3.5) rotateY(-270deg) rotateX(0deg);
+	}*/
+}
+@keyframes rookie-rotate-to-car {
+	100% {
+		transform: translate3d(800%,-50%,$bodyDepth) rotateY(-90deg) rotateX(0deg);
+	}
+}
