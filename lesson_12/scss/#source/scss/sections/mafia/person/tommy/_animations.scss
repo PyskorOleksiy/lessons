@@ -1,0 +1,65 @@
+/*----------------ROTATE-------------------*/
+//+
+@keyframes tommy-rot-0deg-y {
+   100% {
+      transform: translateZ(0-$yardDepth*0.4) rotateY(0deg);
+   }
+}
+//-
+@keyframes tommy-rot-min30deg-y {
+   100% {
+      transform: translateZ(0-$yardDepth*0.4) rotateY(-30deg);
+   }
+}
+@keyframes to-water {
+   100% {
+      transform: rotateX(80deg);
+   }
+}
+@keyframes tommy-throw-back {
+   100% {
+      transform: translateX(50%) translateZ(0-$yardDepth*0.45) rotateY(-30deg);
+   }
+}
+@keyframes shot-inertion-tommy-hand {
+   100% {
+      transform: rotateX(-10deg) rotateZ(20deg);
+   }
+}
+@keyframes after-shot-tommy-leg {
+   20%,
+   80% {
+      transform: rotateX(20deg);
+   }
+   100% {
+      transform: rotateX(-20deg);
+   }
+}
+@keyframes r-hand-to-wound {
+   100% {
+      transform: rotateX(10deg) rotateZ(30deg);
+   }
+}
+@keyframes l-hand-to-wound {
+   100% {
+      transform: rotateX(10deg) rotateZ(-30deg);
+   }
+}
+@keyframes blood-leakage {
+   100% {
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+   }
+}
+@keyframes tommy-fall {
+   20% {
+      transform: translateX(50%) translateZ(0-$yardDepth*0.45) rotateY(-30deg) rotateZ(10deg);
+   }
+   60% {
+      transform: translateX(50%) translateZ(0-$yardDepth*0.45) rotateY(-30deg) rotateZ(-10deg);
+   }
+   100% {
+      transform: translateX(50%) translateZ(0-$yardDepth*0.45) rotateY(-30deg) rotateZ(90deg);
+   }
+}
