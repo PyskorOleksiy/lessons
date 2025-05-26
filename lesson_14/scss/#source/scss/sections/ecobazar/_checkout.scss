@@ -1,0 +1,20 @@
+.billing {
+   padding: 1.666667% 0 4.166667%; /* 80/1920 */
+
+   [class*="__title"] {
+      line-height: 1.5;
+   }
+
+   &__container {
+   }
+
+   &__body {
+      &>* {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__form {
+      gap: 24px 1.818182%; /* 24/1320 */
+   }
+}
