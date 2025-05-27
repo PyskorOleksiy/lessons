@@ -1,0 +1,224 @@
+//@import "_fonts";
+@import "_nullstyle";
+
+
+//$fontSize: 16;
+//$baseWidth: 1728; //Business
+//$baseWidth: 1920; //Ecobazar
+//$baseContainerWidth: 1202; //Business
+$baseContainerWidth: 1320; //Ecobazar
+$inputPadding: 16;
+
+$mainColor: #2C742F;
+$color1: #EE2918;
+$color2: rgba(255, 255, 255, 0.9);
+$color3: #262625;
+$color4: #74d7f0;
+$color5: #000;
+
+$flsColor1: #5E5372;
+$flsColor2: #32B5A4;
+$flsColor3: #EBE691;
+
+/*$rebelColor1: #fff;
+$rebelColor2: #000;
+$rebelColor3: #878787;*/
+
+$ecoColor1Var1: #E6E6E6;
+$ecoColor1Var2: #ccc;
+$ecoColor1Var4: #999;
+$ecoColor1Var5: #808080;
+$ecoColor1Var6: #666;
+$ecoColor1Var7: #4D4D4D;
+$ecoColor1Var9: #1A1A1A; 
+$ecoPrimary: #00B207; 
+$ecoWhite: #fff;
+$ecoColor4: #F2F2F2;
+$ecoHardPrimary: #2C742F;
+$ecoWarning: #FF8A00;
+$ecoError: #EA4B48;
+
+/*$busiColor1: #5A54F2;
+$busiColor2: #fff;
+$busiColor3: #412672;
+$busiColor4: #4F4F4F;
+$busiColor5: #FE3F3F;
+$busiColor6: #000;*/
+
+@mixin flexColumn {
+   display: flex;
+   flex-direction: column;
+}
+@mixin flexWrap {
+   display: flex;
+   flex-wrap: wrap;
+}
+@mixin imgStandart {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+body {
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   overflow: clip;
+}
+main {
+   display: flex;
+   flex-direction: column;
+   flex: 1 0 auto;
+
+   &>* {
+      flex: 1 0 auto;
+   }
+}
+h1 {
+   font-family: "Old Standart TT", serif;
+   font-size: 64px;
+   line-height: 1.09375; /* 70/64 */
+   font-weight: 700;
+   //text-align: center;
+}
+a {
+   &:focus-visible {
+      outline: 2px solid $mainColor;
+      outline-offset: 5px;
+   }
+}
+picture {
+   display: block;
+}
+img {
+   align-content: center;
+   text-align: center;
+}
+/*----------------------FORM----------------------*/
+input {
+   &[type="checkbox"],
+   &[type="radio"] {
+      opacity: 0;
+      cursor: pointer;
+   }
+   /*&[type="number"] {
+      // Firefox
+      -moz-appearance: none;
+      // Safari/Chrome/Edge
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+         -webkit-appearance: none;
+         //margin: 0;
+      }
+   }*/
+}
+textarea {
+   resize: vertical;
+}
+select {
+   font-family: inherit;
+   width: 100%;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   appearance: none;
+
+   option {
+      color: $ecoColor1Var9;
+   }
+}
+.item-form__input:focus,
+button {
+   outline: none;
+}
+.item-form__label:hover .item-form__input:not(:disabled),
+.item-form__label:has(input[class*="--check"]:not(:disabled)):hover .item-form__input-wrapper, 
+.item-form__input:focus { //.item-form__input-wrapper:has(input[class*="--check"]:focus-visible)
+   border-color: $ecoPrimary;
+}
+/*.item-form__input-wrapper:has(input[type="radio"]:focus-visible) {
+   outline: 2px solid $ecoPrimary;
+}*/
+/*----------------------------------------------------*/
+/*abbr {
+   transition: all 0.3s;
+
+   &:hover {
+      color: $color1;
+   }
+}*/
+/*-----------------------COLOR-----------------------------*/
+[class*="--color1-var7"] {
+   color: $ecoColor1Var7;
+}
+[class*="--color1-var9"] {
+   color: $ecoColor1Var9;
+}
+/*---------------------------------------------------------*/
+[class*="__container"] {
+   padding-inline: 15px;
+   margin: 0 auto;
+   max-width: $baseContainerWidth + px;
+   //max-width: 1800px;
+   box-sizing: content-box;
+}
+[class*="__cards"] {
+}
+[class*="__price"] {
+   font-weight: 500;
+}
+[class*="__title"] {
+   color: $ecoColor1Var9;
+}
+/*.title {
+   line-height: 1.5;
+   color: $ecoColor1Var9;
+
+   &--fs-s-v1 {
+      font-size: 24px;
+      
+   }
+   &--fs-s-v2 {
+      font-size: 20px;
+      
+   }
+   &--fw-500 {
+      font-weight: 500;
+   }
+}*/
+
+
+//-------------------ANIMATIONS-------------------//
+@import "animations/_hero";
+/*-------------------------------------------------------*/
+
+@import "sections/_header";
+@import "sections/_hero";
+
+//-------------------ECOBAZAR-------------------//
+//OTHER
+@import "sections/ecobazar/_buttons";
+
+//SECTIONS
+@import "sections/ecobazar/_checkout";
+
+//FORM
+@import "sections/ecobazar/forms/_forms";
+@import "sections/ecobazar/forms/form-billing/_form-billing";
+@import "sections/ecobazar/forms/form-billing/_order-final";
+/*-------------------------------------------------------*/
+
+@import "sections/_footer";
+
+[class*="--last-marg"] {
+   &>*:last-child {
+      margin-bottom: 0;
+      //margin-right: 0;
+   }
+}
