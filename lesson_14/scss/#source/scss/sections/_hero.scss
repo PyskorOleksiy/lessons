@@ -1,0 +1,172 @@
+.hero {
+   position: relative;
+   padding: 50px 0;
+   min-height: 700px;
+   background: $flsColor1;
+   color: $color5;
+
+   &__body {
+      &>* {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      width: 100%;
+      height: 100%;
+      will-change: transform;
+      animation: girls-appearance 0.5s 6.5s forwards,
+      girls-appearance 0.3s reverse 8.7s forwards;
+      
+      &>picture {
+         position: relative;
+         height: 100%;
+         
+         img {
+            @include imgStandart;
+            object-fit: cover;
+         }
+      }
+   }
+
+   &__image {
+      &--yevhen {
+         position: absolute;
+         top: 0;
+         right: 0;
+         transform: translateX(100%);
+         width: 500px;
+         height: 670px;
+         z-index: 1;
+         will-change: transform;
+         animation: yevhen-appearance 0.5s 2s forwards,
+         yevhen-appearance 0.5s reverse 11.6s forwards;
+      }
+   }
+
+   &__title {
+      position: relative;
+      transform: translateX(-300%);
+      will-change: transform;
+      color: $flsColor3;
+      animation: appearance 0.5s 10.8s forwards;
+   }
+}
+.img-person {
+   &>picture {
+      position: relative;
+      height: 100%;
+
+      img {
+         @include imgStandart;
+         object-fit: contain;
+      }
+   }
+
+   &__inner {
+      position: relative;
+   }
+   &__replica {
+      position: absolute;
+      top: 4%;
+      left: 0;
+      transform: translateX(-50%);
+      max-width: 430px;
+   }
+}
+.replica {
+   width: max-content;
+   border-radius: 35px 5px;
+   font-family: "Poppins", sans-serif;
+   //font-size: 22px;
+   line-height: 1.4;
+   color: $flsColor3;
+
+   &__body {
+      padding: 20px;
+      position: relative;
+      background: $flsColor2;
+      border-radius: inherit;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      visibility: hidden;
+      animation: visibility-standart 3.7s 2.8s,
+      visibility-standart 1.5s 7.7s,
+      visibility-standart 1.5s 9.8s;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 45%;
+         left: 99%;
+         width: 0;
+         height: 0;
+         translate: 0 -50%;
+         border-left: 30px solid $flsColor2;
+         border-top: 15px solid transparent;
+         border-bottom: 15px solid transparent;
+      }
+   }
+   &__text {
+      //!width, height імітують display: none, а scale, opacity, visibility залишають за елементом його місце
+      /*width: 0; 
+      height: 0;
+      will-change: width, height;*/
+
+      p {
+         font-size: 0;
+         //visibility: hidden;
+
+         &:nth-child(1) {
+            animation: replica-appearance 3.7s 2.8s;
+         }
+         &:nth-child(2) {
+            animation: replica-appearance 1.5s 7.7s;
+         }
+         &:nth-child(3) {
+            animation: replica-appearance 1.5s 9.8s;
+         }
+      }
+      /*&:last-child {
+         animation-fill-mode: none;
+      }*/
+   }
+}
+.temporary {
+   position: relative;
+   display: inline-block;
+   will-change: transform;
+   animation: remove-temporary 0.8s 13.8s forwards;
+
+   &__hook {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 500px;
+      height: 70px;
+      transform: translateX(1300%);
+      will-change: transform;
+      animation: hook-appearance 1.5s 12s forwards;
+      //animation: hook-appearance 4s alternate 12.5s;
+   }
+}
+.hook {
+   border-top: 6px solid;
+   border-left: 10px solid;
+   border-color: #000;
+   border-top-left-radius: 50%;
+   border-bottom-left-radius: 50%;
+
+   /*&::before {
+      content: '';
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-top: 4px solid;
+      border-left: 4px solid;
+      border-color: inherit;
+      border-radius: 50%;
+   }*/
+}
