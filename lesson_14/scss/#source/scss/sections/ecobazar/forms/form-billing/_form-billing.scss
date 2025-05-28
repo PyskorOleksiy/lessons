@@ -1,0 +1,63 @@
+.form-billing {
+   //@include flexWrap;
+   display: flex;
+
+   /*[class*="__title"] {
+      font-weight: 500;
+   }*/
+
+   &__input-info {
+      flex: 1 1 872px;
+
+      /*[class*="__title"] {
+         font-size: 24px;
+      }*/
+   }
+
+   &__order-final {
+      flex: 1 1 424px;
+      align-self: flex-start;
+
+      /*[class*="__title"] {
+         font-size: 20px;
+      }*/
+   }
+}
+.input-info {
+   &>* {
+      margin-bottom: 32px;
+      padding-bottom: 3.669725%;
+   }
+
+   &__section {
+      
+   }
+
+   &>*:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+   }
+}
+.input-info>*,
+.total>* {
+   border-bottom: 1px solid $ecoColor1Var1;
+}
+.pay-method {
+
+   &__body {
+      &>* {
+         margin-bottom: 16px;
+      }
+   }
+
+   &__title {
+   }
+
+   &__item {
+   }
+}
+.item-form__input,
+.order-final {
+   border: 1px solid $ecoColor1Var1;
+   background: $ecoWhite;
+}
