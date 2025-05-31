@@ -1,0 +1,240 @@
+/*@import "fonts.css";*/
+@import "nullstyle.css";
+@import "sections/header.css";
+@import "sections/hero.css";
+
+/*-------------------ECOBAZAR-------------------*/
+/*OTHER*/
+@import "sections/ecobazar/buttons/buttons.css";
+@import "sections/ecobazar/rating/rating.css";
+
+/*SECTIONS*/
+@import "sections/ecobazar/ecobazar.css";
+
+/*PRODUCTS*/
+@import "sections/ecobazar/cards/prod-cards/prod-cards.css";
+
+/*FORM*/
+/*-------------------------------------------------------*/
+
+@import "sections/footer.css";
+
+/*-------------------MEDIA-------------------*/
+@import "sections/ecobazar/buttons/media-q.css";
+@import "sections/ecobazar/media-q.css";
+@import "sections/ecobazar/cards/prod-cards/media-q.css";
+@import "sections/ecobazar/rating/media-q.css";
+/*-------------------------------------------------------*/
+
+/*-------------------ACTIVE---------------------*/
+@import "sections/ecobazar/active.css";
+/*---------------------------------------------*/
+
+
+/*$fontSize: 16;
+//$baseWidth: 1728; //Business
+//$baseWidth: 1920; //Ecobazar
+//$baseContainerWidth: 1202; //Business*/
+/*$baseContainerWidth: 1320; //Ecobazar*/
+/*$inputPadding: 16;*/
+
+/*$mainColor: #2C742F;
+$color1: #EE2918;
+$color2: rgba(255, 255, 255, 0.9);
+$color3: #262625;
+$color4: #74d7f0;
+$color5: #000;*/
+
+/*$flsColor1: #5E5372;
+$flsColor2: #32B5A4;
+$flsColor3: #EBE691;*/
+
+/*$rebelColor1: #fff;
+$rebelColor2: #000;
+$rebelColor3: #878787;*/
+
+/*$ecoColor1Var1: #E6E6E6;
+$ecoColor1Var2: #ccc;
+$ecoColor1Var4: #999;
+$ecoColor1Var5: #808080;
+$ecoColor1Var6: #666;
+$ecoColor1Var7: #4D4D4D;
+$ecoColor1Var9: #1A1A1A; 
+$ecoPrimary: #00B207; 
+$ecoWhite: #fff;
+$ecoColor4: #F2F2F2;
+$ecoHardPrimary: #2C742F;
+$ecoWarning: #FF8A00;
+$ecoError: #EA4B48;*/
+
+/*$busiColor1: #5A54F2;
+$busiColor2: #fff;
+$busiColor3: #412672;
+$busiColor4: #4F4F4F;
+$busiColor5: #FE3F3F;
+$busiColor6: #000;*/
+
+/*@mixin flexColumn {
+   display: flex;
+   flex-direction: column;
+}
+@mixin flexWrap {
+   display: flex;
+   flex-wrap: wrap;
+}
+@mixin imgStandart {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}*/
+
+body {
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   line-height: 1.5;
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+   overflow: clip;
+}
+main {
+   display: flex;
+   flex-direction: column;
+   flex: 1 0 auto;
+}
+main>* {
+   flex: 1 0 auto;
+}
+[class*="__container"] {
+   padding-inline: 15px;
+   margin-inline: auto;
+   max-width: 1320px;
+   box-sizing: content-box;
+}
+h1 {
+   font-family: "Old Standart TT", serif;
+   font-size: 64px;
+   line-height: 1.09375; /* 70/64 */
+   font-weight: 700;
+   /*text-align: center;*/
+}
+a:focus-visible {
+   outline: 2px solid #2C742F;
+   outline-offset: 5px;
+}
+picture {
+   display: block;
+}
+img {
+   align-content: center;
+   text-align: center;
+}
+/*----------------------FORM----------------------*/
+input[type="checkbox"],
+input[type="radio"] {
+   width: 0;
+   height: 0;
+   cursor: pointer;
+}
+/*input[type="number"] {
+   // Firefox
+   -moz-appearance: none;
+   // Safari/Chrome/Edge
+   input[type="number"]::-webkit-inner-spin-button,
+   input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      //margin: 0;
+   }
+}*/
+/*input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+}*/
+textarea {
+   resize: vertical;
+}
+select {
+   font-family: inherit;
+   width: 100%;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   appearance: none;
+}
+/*----------------------------------------------------*/
+/*abbr {
+   transition: all 0.3s;
+
+   &:hover {
+      color: $color1;
+   }
+}*/
+[class*="__cards"] {
+}
+/*-----------------------COLOR-----------------------------*/
+[class*="--col-prima"] {
+   color: #00B207;
+}
+[class*="--col-hard-prima"] {
+   color: #2C742F;
+}
+[class*="--col-white"] {
+   color: #fff;
+}
+[class*="--col1-var9"] {
+   color: #1A1A1A;
+}
+[class*="--col1-var7"] {
+   color: #4D4D4D;
+}
+/*---------------------------------------------------------*/
+/*-----------------------PADDING-----------------------------*/
+[class*="--padd"] {
+   padding-block: 30px;
+}
+/*---------------------------------------------------------*/
+/*[class*="__price"] {
+   font-weight: 500;
+}*/
+/*.title {
+   line-height: 1.5;
+   color: $ecoColor1Var9;
+
+   &--fs-s-v1 {
+      font-size: 24px;
+      
+   }
+   &--fs-s-v2 {
+      font-size: 20px;
+      
+   }
+   &--fw-500 {
+      font-weight: 500;
+   }
+}*/
+
+
+/*-------------------ANIMATIONS-------------------*/
+/*@import "animations/hero.css";*/
+/*-------------------------------------------------------*/
+
+/*@import "header.css";*/
+/*@import "sections/hero.css";*/
+
+/*-------------------ECOBAZAR-------------------*/
+/*OTHER*/
+
+/*SECTIONS*/
+
+/*FORM*/
+/*-------------------------------------------------------*/
+
+/*@import "sections/footer.css";*/
+
+[class*="--last-marg"]>*:last-child {
+   margin-bottom: 0;
+}

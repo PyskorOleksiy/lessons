@@ -1,0 +1,35 @@
+[class*="--ecobazar"] a {
+   transition: color 0.3s;
+}
+.products {
+}
+.products__container {
+}
+.products__body {
+}
+.products__body>* {
+   margin-bottom: 32px;
+}
+.products__heading {
+}
+.heading {
+   display: flex;
+   justify-content: space-between;
+   gap: 50px;
+}
+.heading__title {
+   font-size: 32px;
+   font-weight: 600;
+   line-height: 1.2; 
+   color: #1A1A1A;
+}
+.heading__link {
+}
+.products__cards {
+}
+
+/*----------------JOINT STYLES--------------------*/
+/*.products a:not([class*="__title"] a):hover {
+   color: #2C742F;
+}*/
+/*------------------------------------------*/

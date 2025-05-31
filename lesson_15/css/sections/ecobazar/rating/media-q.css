@@ -1,0 +1,8 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+	.rating__item:hover path,
+   .rating__item:hover ~ .rating__item path {
+      fill: #FF8A00;
+   }
+}
+/*---------------------------------------------*/

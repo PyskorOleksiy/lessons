@@ -1,0 +1,7 @@
+.button--wish:active {
+   transition: background-color 0s;
+   background: #fff;
+}
+.button--wish:active path {
+   fill: #00B207;
+}
