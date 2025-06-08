@@ -1,0 +1,99 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   .nav>ul li {
+      transition: color 0.3s;
+   }
+   .nav>ul li:hover {
+      color: #F26522;
+   }
+}
+/*--------------------------------------------*/
+
+/*----------------MOBILE FIRST-----------------*/
+@media (min-width: 1051px) {
+   .nav>ul {
+      column-gap: 30px;
+   }
+}
+@media (min-width: 992px) {
+   .header__logo strong {
+      display: block;
+   }
+   .nav>ul li {
+      font-size: 13px;
+   }
+}
+@media (min-width: 848px) {
+   .header__container {
+      justify-content: space-between;
+      gap: 40px;
+   }
+   .header__logo {
+      flex-grow: 0;
+   }
+   .nav {
+      display: block;
+   }
+   .header__burger {
+      display: none;
+   }
+   .menu {
+      display: none;
+   }
+}
+@media (min-width: 768px) {
+   .header__top {
+      min-height: 97px;
+   }
+   .menu {
+      padding-top: calc(97px + 30px);
+   }
+}
+@media (min-width: 651px) {
+   .header__container {
+      gap: 30px;
+   }
+}
+@media (min-width: 453px) {
+   .menu__heading,
+   .menu__logo {
+      display: none;
+   }
+}
+@media (min-width: 371px) {
+   .header__menu {
+      min-width: 300px;
+   }
+}
+@media (min-width: 848px) and (max-width: 991.98px) {
+   .header__logo strong {
+      display: none;
+   }
+}
+@media (min-width: 453px) and (max-width: 847.98px) { 
+   .header__logo strong {
+      display: block;
+   }
+}
+/*-------------------------------------------*/
+
+@media (max-width: 535.98px) {
+   .header__logo {
+      font-size: 16px;
+   }
+   .header__link {
+      padding-inline: 20px;
+      gap: 5px;
+   }
+   .header__link svg {
+      width: 20px;
+   }
+}
+
+/*------------АЛЬБОМНА ОРІЄНТАЦІЯ-----------------*/
+@media (max-width: 767.98px) and (orientation: landscape) {
+   .header__top {
+      min-height: 67px;
+   }
+}
+/*------------АЛЬБОМНА ОРІЄНТАЦІЯ-----------------*/
