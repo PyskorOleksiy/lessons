@@ -1,0 +1,200 @@
+.cards-products {
+   overflow: auto;
+   margin-inline: -10px;
+   padding-inline: 10px;
+}
+.cards-products__card {
+   flex: 0 0 calc(90% + 1px);
+}
+.card-product {
+   /*!При від'ємному margin сусідні карточки налазять на ту, якій задано такий margin - це зроблено, щоб не поєднувались border-и*/
+   margin: 0 -1px -1px 0;
+   /*padding: 0 8px;*/
+   /*position: relative;*/
+   /*display: flex;
+   flex-direction: column;*/
+}
+.card-product--sale {
+}
+.card-product--sale .card-product__price strong:last-of-type {
+   display: inline;
+}
+.card-product--sale .label-prod--sale,
+.card-product--new .label-prod--new,
+.card-product--best .label-prod--best,
+.card-product--out .label-prod--out {
+   display: inline-block;
+}
+.card-product__inner {
+   position: relative;
+   height: 100%;
+   border: 1px solid #E6E6E6;
+   /*border-top: 1px solid #E6E6E6;
+   border-bottom: 1px solid #E6E6E6;
+   border-left: 1px solid #E6E6E6;*/
+   background: #fff;
+}
+/*!При наведенні анімація проходить плавно з усіх сторін, але якщо прибрати курсор з карточки, то та сторона, яка знаходиться під сусідньою карточкою (див. margin: 0 -1px -1px 0) буде повертати стилі за замовчуванням різко, оскільки z-index не анімується плавно. Рішення - створити абсолютно позиціонований елемент, який буде з'являтись лише при наведенні на карточку і буде мати більший z-index, ніж у сусідньої карточки*/
+.card-product__inner::before {
+   content: '';
+   position: absolute;
+   top: -1px;
+   bottom: -1px;
+   left: -1px;
+   right: -1px;
+   z-index: 2;
+   border-radius: inherit;
+   border: 1px solid #2C742F;
+   box-shadow: 0px 0px 12px 0px rgba(32, 181, 38, 0.32);
+   opacity: 0;
+   pointer-events: none;
+}
+/*.card-product:nth-child(5n+5) .card-product__inner,
+.card-product:last-child .card-product__inner {
+   border-right: 1px solid #E6E6E6;
+}*/
+.card-product__body {
+   position: relative;
+   height: 100%;
+}
+.card-product__image {
+   border: 5px solid transparent;
+}
+.card-product__image:focus-visible {
+   outline: none;
+   border-color: #2C742F;
+}
+.card-product__image>picture {
+   /*width: 100%;*/
+   aspect-ratio: 254 / 230;
+}
+.card-product__description {
+   padding: 4.580153%; /* 12/262 */
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+}
+.card-product__description>* {
+   margin-bottom: 10px;
+}
+.card-product__title {
+   color: #4D4D4D;
+   font-size: 18px;
+   /*font-weight: 500;*/
+   line-height: 1.1875;
+}
+.card-product__title a {
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2; /* Кількість рядків */
+   /*line-clamp: 2;*/
+   overflow: hidden;
+}
+.card-product__group {
+   display: flex;
+   /*align-items: flex-start;*/
+   /*flex-wrap: wrap;*/
+   justify-content: space-between;
+   gap: 20px;
+   flex-grow: 1;
+}
+.card-product__info {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+.card-product__info>* {
+   margin-bottom: 6px;
+}
+.card-product__price {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0 2px;
+   font-size: 18px;
+   line-height: 1.2;
+   color: #1A1A1A;
+}
+.card-product__live-price {
+   font-weight: 600;
+}
+.card-product__old-price {
+   display: none;
+   color: #999;
+   text-decoration: line-through;
+   font-weight: 400;
+}
+.card-product__rating {
+   align-self: flex-start;
+}
+.card-product__btn {
+   align-self: flex-end;
+   flex-shrink: 0;
+   background: #F2F2F2;
+}
+.card-product__overlay {
+}
+
+/*--------------OVERLAY-----------------*/
+.overlay-prod {
+   padding: 6.10687%; /* 16/262 */
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   align-items: flex-start;
+}
+.overlay-prod__labels {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   align-items: flex-start;
+}
+.overlay-prod__label {
+   display: none;
+   padding: 3px 8px;
+   text-align: center;
+}
+.label-prod {
+   color: #FFF;
+   font-weight: 400;
+   border-radius: 4px;
+}
+.label-prod--sale {
+   background: #EA4B48;
+}
+.label-prod--new {
+   background: #FF8A00;
+}
+.label-prod--best {
+   background: #2388FF;
+}
+.label-prod--out {
+   background: #1A1A1A;
+}
+.label-prod>span {
+   font-weight: 500;
+}
+.overlay-prod__buttons {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap-reverse;
+   justify-content: flex-end;
+   gap: 12px;
+   max-height: 260px;
+}
+.overlay-prod__btn {
+   background: #fff;
+   border: 1px solid #F2F2F2;
+}
+.overlay-prod__btn:hover {
+   border-width: 0;
+   background-color: #00B207;
+}
+/*------------------------------------------*/
+
+/*----------------JOINT STYLES--------------------*/
+.overlay-prod__label,
+.overlay-prod__btn {
+   position: relative;
+   z-index: 1;
+}
+/*------------------------------------------*/
