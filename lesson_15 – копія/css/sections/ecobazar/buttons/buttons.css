@@ -1,0 +1,61 @@
+/*---------------BUTTONS-------------------*/
+.button {
+   text-align: center;
+   transition: background-color 0.5s;
+}
+.button:hover {
+   background-color: #2C742F;
+}
+.button:hover path {
+   stroke: #fff;
+}
+.button--big {
+   padding: 16px 40px;
+   background: #00B207;
+   border-radius: 43px;
+}
+.button--small {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 40px;
+   aspect-ratio: 1 / 1;
+   border-radius: 50%;
+   background: #F2F2F2;
+}
+.button--small svg {
+   width: 50%;
+   aspect-ratio: 1 / 1;
+}
+.button * {
+   color: #000;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 1.2;
+}
+.button:focus-visible {
+   outline-width: 5px;
+}
+.button path {
+   transition: stroke 0.5s;
+}
+/*-------------------------------------------------*/
+
+/*----------------JOINT STYLES--------------------*/
+/*------------------------------------------*/
+
+/*----------------------------LINKS----------------------------------*/
+.link {
+   display: inline-flex;
+   align-items: center;
+   gap: 12px;
+   font-size: 16px;
+   color: #00B207;
+}
+.link strong {
+   font-weight: 500;
+}
+.link svg {
+   flex-shrink: 0;
+}
+/*-------------------------------------------------*/

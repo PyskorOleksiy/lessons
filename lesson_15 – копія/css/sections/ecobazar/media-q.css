@@ -1,0 +1,48 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   [class*="--ecobazar"] a {
+      transition: color 0.5s;
+   }
+   [class*="--ecobazar"] a:hover {
+      color: #2C742F;
+   }
+}
+/*---------------------------------------------*/
+@media (min-width: 768px) {
+   .heading__title--fs-s {
+      font-size: 32px;
+   }
+}
+@media (min-width: 601px) and (max-width: 767.98px) {
+   .heading__title {
+      font-size: 28px;
+   }
+}
+@media (min-width: 441px) and (max-width: 600.98px) {
+   .heading__title {
+      font-size: 24px;
+   }
+}
+@media (min-width: 601px) {
+   .heading__link strong {
+      white-space: nowrap;
+   }
+}
+/*@media (min-width: 551px) and (max-width: 600px) {
+   .heading__title {
+      font-size: 24px;
+   }
+}*/
+@media (max-width: 600px) {
+   .heading {
+      flex-wrap: wrap;
+   }
+}
+/*@media (max-width: 500px) {
+   .heading {
+      flex-wrap: wrap;
+   }
+   .heading__link strong {
+      white-space: normal;
+   }
+}*/
