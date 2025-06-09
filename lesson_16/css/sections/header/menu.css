@@ -1,0 +1,50 @@
+.menu {
+   padding-top: calc(77px + 20px);
+   padding-bottom: 20px;
+   overflow: auto;
+   background: #30313c;
+}
+.menu * {
+   visibility: hidden;
+}
+.menu__container {
+   padding-right: 20px;
+}
+.menu__container>* {
+   margin-bottom: 20px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #958c8c;
+   /*visibility: hidden;*/
+}
+.menu__heading {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+.menu__logo {
+   flex-grow: 1;
+   color: #F26522;
+   font-size: 16px;
+   justify-content: center;
+}
+.menu .logo__image {
+   width: 34px;
+}
+.menu .nav {
+   display: block;
+}
+.menu .nav>ul {
+   flex-direction: column;
+   /*align-items: flex-end;*/
+   row-gap: 25px;
+   color: #fff;
+}
+.menu .nav>ul li {
+   font-size: 18px;
+   text-align: end;
+}
+.menu__container>*:last-child {
+   padding-bottom: 0;
+   border-bottom: none;
+}
