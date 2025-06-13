@@ -1,0 +1,22 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   .banner-card__link {
+      transition: background-color 0.5s, color 0.5s;
+   }
+   .banner-card__link path {
+      transition: stroke 0.5s;
+   }
+   .banner-card__link:hover {
+      background-color: #00B207;
+      color: #fff;
+   }
+   .banner-card__link:hover path {
+      stroke: #fff;
+   }
+   /*----------------JOINT STYLES--------------------*/
+   /*------------------------------------------*/
+}
+/*---------------------------------------------*/
+
+/*--------------------COMBINE MEDIA----------------*/
+/*---------------------------------------------------*/

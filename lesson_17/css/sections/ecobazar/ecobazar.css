@@ -1,0 +1,106 @@
+/*-------------------PRODUCTS------------------------*/
+.ecobazar {
+   position: relative;
+   background: #EDF2EE url('../../../img/decor/product-icons/top-left.avif') -43px -41px / 21.822917% no-repeat;
+   overflow: hidden;
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   color: #1A1A1A;
+   line-height: 1.5;
+}
+/*-----------------------PADDING-----------------------------*/
+[class*="--padd-m"] {
+   padding-block: 15px;
+}
+/*---------------------------------------------------------*/
+/*-----------------------MARGIN-----------------------------*/
+[class*="__body--marg-s"]>* {
+   margin-bottom: 22px;
+}
+/*---------------------------------------------------------*/
+.ecobazar::before,
+.ecobazar::after {
+   content: '';
+   position: absolute;
+}
+.ecobazar::before {
+   top: -41px;
+   right: -41px;
+   width: 18.59375%; /* 357/1920 */
+   aspect-ratio: 357 / 478;
+   background: url('../../../img/decor/product-icons/top-right.avif') right top / cover no-repeat;
+}
+.ecobazar::after {
+   bottom: -253px;
+   left: -42px;
+   width: 25.208333%; /* 484/1920 */
+   aspect-ratio: 484 / 764;
+   background: url('../../../img/decor/product-icons/bottom-left.avif') 0 0 / cover no-repeat;
+}
+.ecobazar__decor {
+   background: url('../../../img/decor/product-icons/bottom-right.avif') right -66px bottom -449px / 23.28125% no-repeat;
+}
+.ecobazar [class*="__container"]:not(.ecobazar__container) {
+   max-width: 1320px;
+}
+.ecobazar__container {
+   position: relative;
+   padding-inline: 0;
+   background: #fff;
+   max-width: 1360px;
+   z-index: 1;
+}
+.products {
+}
+.products__container {
+}
+.products__body {
+}
+.products__heading {
+}
+.heading {
+   display: flex;
+   justify-content: space-between;
+   gap: 8px 50px;
+}
+.heading__subtitle {
+   color: #00B207;
+   font-weight: 500;
+   line-height: 1; 
+   letter-spacing: 0.28px;
+   text-transform: uppercase;
+}
+.heading__title {
+   font-size: 22px;
+   font-weight: 600;
+   line-height: 1.2;
+}
+.heading--column {
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+.heading__link {
+}
+.products__cards {
+}
+/*-------------------------------------------------------*/
+
+/*---------------------------NEWS---------------------------*/
+.news {
+}
+.news__container {
+}
+.news__body {
+}
+.news__heading {
+}
+.news__cards {
+}
+/*------------------------------------------------*/
+
+/*----------------JOINT STYLES--------------------*/
+/*.products a:not([class*="__title"] a):hover {
+   color: #2C742F;
+}*/
+/*------------------------------------------*/

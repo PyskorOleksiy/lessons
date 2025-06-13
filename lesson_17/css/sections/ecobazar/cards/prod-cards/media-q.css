@@ -1,0 +1,47 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   /*.prod-card__inner::before {
+      transition: opacity 0.5s;
+   }*/
+	/*.prod-card__inner:hover::before {
+      opacity: 1;
+   }*/
+   .prod-card:hover .prod-card__title {
+      color: #2C742F;
+      /*text-decoration: none;*/
+   }
+   .prod-card:hover .prod-card__btn {
+      background-color: #00B207;
+   }
+   .prod-card:hover .overlay-prod__btn {
+      visibility: visible;
+      opacity: 1;
+   }
+   /*.overlay-prod__buttons {
+      gap: 6px;
+      max-height: 240px;
+   }*/
+   .overlay-prod__btn {
+      visibility: hidden;
+      opacity: 0;
+      transition: background-color 0.5s, opacity 0.5s;
+   }
+   /*----------------JOINT STYLES--------------------*/
+   /*------------------------------------------*/
+}
+/*---------------------------------------------*/
+
+/*------------------АДАПТИВ СТРУКТУРИ КАРТОК----------------------*/
+@media (min-width: 798px) {
+   .cards-products {
+      overflow: visible;
+      grid-auto-rows: 1fr;
+      grid-auto-flow: row;
+      grid-auto-columns: auto;
+      grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+   }
+}
+/*------------------------------------------------------*/
+
+/*--------------------COMBINE MEDIA----------------*/
+/*---------------------------------------------------*/
