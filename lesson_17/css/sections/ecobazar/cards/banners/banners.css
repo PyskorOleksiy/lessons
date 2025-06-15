@@ -1,0 +1,76 @@
+.banner-card {
+   padding: 9.677419% 15px;
+   position: relative;
+   text-align: center;
+   background: #B3B3B3;
+}
+.banner-card--small {
+}
+.banner-card--small .title-banner__small {
+   font-size: 16px;
+}
+.banner-card--small .title-banner__big {
+   font-size: 32px;
+}
+.banner-card__bg {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.banner-card__bg img {
+   /*object-position: bottom;*/
+}
+.banner-card__body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.banner-card__body>* {
+   margin-bottom: 16px;
+}
+.banner-card__title {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+.title-banner {
+}
+.title-banner__small {
+   font-weight: 500;
+   line-height: 1;
+   letter-spacing: 0.36px;
+   text-transform: uppercase;
+}
+.title-banner__big {
+   font-weight: 600;
+}
+.title-banner__big span {
+   font-weight: 400;
+}
+.banner-card__link {
+   /*display: grid;
+   justify-content: center;
+   align-items: center;*/
+   /*grid-template-columns: repeat(2,auto);*/
+   gap: 12px;
+   padding: 14px 32px;
+   font-size: 14px;
+   background-color: #FFF;
+   color: #00B207;
+}
+.banner-card__link svg {
+   /*width: 17px;
+   height: 15px;*/
+}
+/*.banner-card__link:hover {
+   background-color: #00B207;
+}
+.banner-card__link:hover {
+   color: #fff;
+}*/
+/*.banner-card__link:hover path {
+   stroke: #fff;
+}*/
