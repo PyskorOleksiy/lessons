@@ -1,0 +1,159 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   .blossomia a:not(.blos-link) {
+      transition: color 0.6s, text-shadow 0.6s;
+   }
+   .blossomia a:not(.blos-link):hover {
+      color: #6cda66;
+      text-shadow: 5px 5px 35px #ccc;
+   }
+}
+
+@media (any-hover: hover) and (min-width: 768px) {
+   .floral-catalog__content--anim .floral-catalog__title {
+      will-change: transform;
+      transition: opacity 3.5s, filter 2s 1.5s, transform 3.5s; 
+   }
+   .blossomia>section .floral-catalog__content--anim>*:not(.floral-catalog__title) {
+      will-change: transform;
+      transition: transform 2s 2.5s; 
+   }
+   .blossomia>section .floral-catalog__content--anim .floral-catalog__title {
+      opacity: 0;
+      filter: blur(3px);
+   }
+   .blossomia>section:nth-of-type(odd) .floral-catalog__content--anim>* {
+      transform: translateX(150%);
+   }
+   .blossomia>section:nth-of-type(even) .floral-catalog__content--anim>* {
+      transform: translateX(-150%);
+   }
+   .blossomia>section:hover .floral-catalog__content--anim .floral-catalog__title {
+      opacity: 1;
+      filter: blur(0);
+   }
+   .blossomia>section:nth-of-type(odd):hover .floral-catalog__content--anim>*,
+   .blossomia>section:nth-of-type(even):hover .floral-catalog__content--anim>* {
+      transform: translateX(0);
+   }
+}
+/*---------------------------------------------*/
+
+/*--------------H2-----------------*/
+@media (min-width: 1231px) {
+   .blossomia h2 {
+      font-size: 60px;
+   }
+}
+@media (min-width: 1131px) and (max-width: 1230.98px) {
+   .blossomia h2 {
+      font-size: 50px;
+   }
+}
+@media (min-width: 1031px) and (max-width: 1130.98px) {
+   .blossomia h2 {
+      font-size: 40px;
+   }
+}
+@media (min-width: 563px) and (max-width: 1030.98px) {
+   .blossomia h2 {
+      font-size: 32px;
+   }
+}
+@media (min-width: 496px) and (max-width: 562.98px) {
+   .blossomia h2 {
+      font-size: 28px;
+   }
+}
+@media (min-width: 446px) and (max-width: 495.98px) {
+   .blossomia h2 {
+      font-size: 25px;
+   }
+}
+@media (min-width: 446px) {
+   .blossomia h2 {
+      font-weight: 300;
+   }
+}
+/*---------------------------------------------*/
+
+/*-------------------------PADDING----------------------------*/
+@media (min-width: 1200px) {
+   .blossomia [class*="--padd-s"] {
+      padding-block: 45px;
+   }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+   .blossomia [class*="--padd-s"] {
+      padding-block: 35px;
+   }
+}
+/*---------------------------------------------*/
+
+@media (min-width: 1031px) {
+   /*.floral-catalog__main:has(.floral-catalog__title + [class*="__cards"]) .floral-catalog__title {
+      margin-bottom: 10.162602%; 
+   }*/
+   .floral-catalog__title {
+      margin-bottom: 10.15625%; 
+      padding-top: 6.770833%; /* 52/768 */
+   }
+}
+@media (min-width: 851px) and (max-width: 1030.98px) {
+   .floral-catalog__title {
+      padding-top: 3.770833%;
+   }
+}
+@media (min-width: 1126px) {
+   .floral-catalog__group-main {
+      column-gap: 2.583333%; /* 31/1200 */
+   }
+}
+@media (min-width: 768px) {
+   .floral-catalog__container>* {
+      margin-bottom: 50px;
+   }
+}
+@media (min-width: 851px) {
+   .floral-catalog__group-main {
+      display: grid;
+      row-gap: 0;
+   }
+   .blossomia>section:nth-of-type(odd) .floral-catalog__group-main {
+      grid-template-columns: 33.416667% 1fr;
+      grid-template-rows: auto auto 1fr;
+      grid-template-areas: "cat-side cat-content"
+                           "cat-side cat-main"
+                           "cat-link cat-main";
+   }
+   .blossomia>section:nth-of-type(even) .floral-catalog__group-main {
+      grid-template-columns: 1fr 33.416667%;
+      grid-template-rows: auto auto 1fr;
+      grid-template-areas: "cat-content cat-side"
+                           "cat-main cat-side"
+                           "cat-main cat-link";
+   }
+   /*.floral-catalog__side {
+      flex: 1 1 401px;
+   }
+   .floral-catalog__main {
+      flex: 1 1 767px;
+   }*/
+}
+@media (min-width: 501px) {
+   .floral-catalog__main>* {
+      margin-bottom: 5.338542%; /* 41/768 */
+   }
+}
+@media (min-width: 480px) {
+   .floral-catalog__side>* {
+      margin-bottom: 50px;
+   }
+}
+
+/*----------MAX-----------*/
+@media (max-width: 850.98px) {
+   .floral-catalog__content>*:last-child {
+      margin-bottom: 0;
+   }
+}
