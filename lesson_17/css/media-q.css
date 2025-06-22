@@ -1,0 +1,67 @@
+/*-----------------HEADER----------------*/
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   /*----------------JOINT STYLES--------------------*/
+   /*------------------------------------------*/
+}
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+
+@media (min-width: 1200px) {
+   h1 {
+      font-size: 73px;
+   }
+}
+@media (min-width: 1049px) and (max-width: 1199.98px) {
+   h1 {
+      font-size: 55px;
+   }
+}
+@media (min-width: 864px) and (max-width: 1048.98px) {
+   h1 {
+      font-size: 45px;
+   }
+}
+@media (min-width: 679px) and (max-width: 863.98px) {
+   h1 {
+      font-size: 35px;
+   }
+}
+@media (min-width: 456px) and (max-width: 678.98px) {
+   h1 {
+      font-size: 30px;
+   }
+}
+@media (min-width: 401px) and (max-width: 455.98px) {
+   h1 {
+      font-size: 28px;
+   }
+}
+
+@media (min-width: 768px) {
+   .ecobazar [class*="--padd-m"] {
+      padding-block: 30px;
+   }
+}
+@media (min-width: 441px) and (max-width: 991.98px) {
+   /*.ecobazar [class*="--padd-m"] {
+      padding-block: 20px;
+   }*/
+}
+@media (min-width: 768px) {
+   /*.ecobazar [class*="--marg-s-v1"]>* {
+      margin-bottom: 32px;
+   }*/
+   /*.ecobazar [class*="--marg-s-v2"]>* {
+      margin-bottom: 36px;
+   }*/
+}
+@media (min-width: 401px) {
+   [class*="__container"]:not(.ecobazar__container),
+   [class*="--scroll"] {
+      padding-inline: 15px;
+   }
+   [class*="--scroll"] {
+      margin-inline: -15px;
+   }
+}
