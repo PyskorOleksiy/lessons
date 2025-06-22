@@ -1,0 +1,29 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   .ecobazar .banner-card__link {
+      transition: background-color 0.5s, color 0.5s;
+   }
+   .banner-card__link path {
+      transition: stroke 0.5s;
+   }
+   .banner-card__link:hover {
+      background-color: #00B207;
+   }
+   .ecobazar .banner-card__link:hover {
+      color: #fff;
+   }
+   .banner-card__link:hover path {
+      stroke: #fff;
+   }
+   /*----------------JOINT STYLES--------------------*/
+   /*------------------------------------------*/
+}
+/*---------------------------------------------*/
+
+@media (min-width: 768px) {
+   .banner-card--small .title-banner__small {
+      font-size: 12px;
+   }
+}
+/*--------------------COMBINE MEDIA----------------*/
+/*---------------------------------------------------*/
