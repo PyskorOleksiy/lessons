@@ -1,0 +1,110 @@
+/*-------------------HOVER---------------------*/
+@media (any-hover: hover) {
+   .floral-card__image img {
+      will-change: transform;
+      transition: transform 1s;
+   }
+   .floral-card__image:hover img {
+      transform: scale(1.03);
+   }
+   .floral-card__buttons {
+      row-gap: 10px;
+      align-self: start;
+   }
+   /*----------------JOINT STYLES--------------------*/
+   @media (any-hover: hover) and (max-width: 1125.98px) {
+      .blossomia .floral-card__title a:hover {
+         color: #42873d;
+      }
+   }
+   /*------------------------------------------*/
+}
+/*---------------------------------------------*/
+
+/*----------------------PRODUCTS---------------------*/
+@media (min-width: 1126px) {
+   .floral-cards {
+      row-gap: 37px;
+      column-gap: 3.778502%;
+   }
+   .floral-card__description:has(>:first-child:not([class])) .floral-card__title,
+   .floral-card__description:has(>:first-child:not([class])) .floral-card__buttons {
+      grid-row: 2 / 3;
+   }
+   .floral-card__description {
+      padding: 0;
+      box-shadow: none;
+      background: none;
+   }
+   .floral-card__description>p {
+      font-size: inherit;
+   }
+   .floral-card__title {
+      grid-column: auto;
+   }
+   .floral-card__short-info {
+      grid-column: 1 / -1;
+   }
+   .floral-card__buttons {
+      grid-row: 1 / -1;
+   }
+   /*.floral-card__price {
+      grid-column: 1 / -1;
+   }*/
+}
+@media (min-width: 851px) and (max-width: 1125.98px) {
+   .floral-cards {
+      column-gap: 15px;
+   }
+}
+/*---------------------------------------------*/
+/*------------------АДАПТИВ СТРУКТУРИ КАРТОК----------------------*/
+@media (min-width: 851px) {
+   .floral-cards--side {
+      grid-template-columns: 100%;
+      grid-auto-rows: auto;
+      /*row-gap: 25px;*/
+   }
+   .floral-card__body {
+      gap: 15px;
+   }
+}
+@media (min-width: 768px) {
+   .floral-cards {
+      /*margin-inline: 0;
+      padding-inline: 0;*/
+      padding-bottom: 0;
+      grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+      grid-auto-flow: row;
+      overflow: visible;
+   }
+   .floral-card__price {
+      font-weight: 400;
+   }
+}
+@media (min-width: 601px) and (max-width: 767.98px) {
+   .floral-cards {
+      grid-auto-columns: 45%;
+   }
+}
+@media (min-width: 421px) and (max-width: 600px) {
+   .floral-cards {
+      grid-auto-columns: 75%;
+   }
+}
+@media (min-width: 401px) and (max-width: 767.98px) {
+   .floral-cards {
+      /*margin-inline: -15px;
+      padding-inline: 15px;*/
+   }
+}
+/*-------MAX------*/
+@media (max-width: 850px) {
+   .floral-cards--side {
+      /*grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));*/
+   }
+}
+/*------------------------------------------------------*/
+
+/*--------------------COMBINE MEDIA----------------*/
+/*---------------------------------------------------*/
