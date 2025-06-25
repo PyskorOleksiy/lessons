@@ -1,0 +1,128 @@
+/*-------------------PRODUCTS------------------------*/
+.ecobazar,
+.ecobazar__container {
+   background: #fff;
+}
+.ecobazar {
+   position: relative;
+   overflow: hidden;
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   color: #1A1A1A;
+   line-height: 1.5;
+}
+.ecobazar a:focus-visible,
+.ecobazar button:focus-visible {
+   outline: solid #2C742F;
+}
+/*.ecobazar a:focus-visible {
+   outline-width: 2px;
+   outline-offset: 5px;
+}*/
+/*-----------------------PADDING-----------------------------*/
+.ecobazar [class*="--padd-m"] {
+   padding-block: 20px;
+}
+/*---------------------------------------------------------*/
+/*-----------------------MARGIN-----------------------------*/
+[class*="__body--marg-s"]>* {
+   margin-bottom: 22px;
+}
+/*---------------------------------------------------------*/
+.ecobazar::before,
+.ecobazar::after {
+   content: '';
+   position: absolute;
+   display: none;
+}
+.ecobazar::before {
+   top: -41px;
+   right: -41px;
+   /*width: 18.59375%; /* 357/1920 */
+   height: min(70%, 478px);
+   aspect-ratio: 357 / 478;
+   background: url('../../../img/decor/product-icons/top-right.avif') right top / cover no-repeat;
+}
+.ecobazar::after {
+   bottom: -253px;
+   left: -42px;
+   /*width: 25.208333%; /* 484/1920 */
+   height: min(100%, 764px);
+   aspect-ratio: 484 / 764;
+   background: url('../../../img/decor/product-icons/bottom-left.avif') 0 0 / cover no-repeat;
+}
+.ecobazar [class*="__container"]:not(.ecobazar__container) {
+   max-width: 1320px;
+}
+.ecobazar__container {
+   position: relative;
+   padding-inline: 0;
+   background: #fff;
+   max-width: 1360px;
+   z-index: 1;
+}
+.products {
+}
+.products__container {
+}
+.products__container>* {
+   margin-bottom: 24px;
+}
+.products__body {
+}
+.products__heading {
+}
+.heading {
+   display: flex;
+   justify-content: space-between;
+   gap: 8px 50px;
+}
+.heading__subtitle {
+   color: #00B207;
+   font-weight: 500;
+   line-height: 1; 
+   letter-spacing: 0.28px;
+   text-transform: uppercase;
+}
+.heading__title {
+   font-size: 22px;
+   font-weight: 600;
+   line-height: 1.2;
+}
+.heading--column {
+   margin-bottom: 26px;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+.heading__link {
+}
+/*.ecobazar [class*="--marg-s-v2"]>* {
+   margin-bottom: 24px;
+}*/
+.ecobazar [class*="--marg-s-v2"] .products__cards {
+   /*margin-bottom: 24px;*/
+}
+.products__categories {
+   
+}
+/*-------------------------------------------------------*/
+
+/*---------------------------NEWS---------------------------*/
+.news {
+}
+.news__container {
+}
+.news__body {
+}
+.news__heading {
+}
+.news__cards {
+}
+/*------------------------------------------------*/
+
+/*----------------JOINT STYLES--------------------*/
+/*.products a:not([class*="__title"] a):hover {
+   color: #2C742F;
+}*/
+/*------------------------------------------*/
