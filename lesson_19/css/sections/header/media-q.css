@@ -1,0 +1,8 @@
+@media (min-width: 53.1875em) {
+   .nav {
+      display: block;
+   }
+   .burger {
+      display: none;
+   }
+}
