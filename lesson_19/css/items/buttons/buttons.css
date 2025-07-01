@@ -1,0 +1,14 @@
+.link {
+   padding: max(0.625rem,1em);
+   /*padding-bottom: max(0.625rem,1em);
+   padding-left: 1.25rem;
+   padding-right: 1.25rem;*/
+   background-color: var(--color5);
+   font-size: clamp(1rem, 0.089rem + 2.86vw, 1.25rem);
+   min-width: 6.25rem;
+   border-radius: 1.25rem;
+}
+.link:hover {
+   background-color: var(--color6);
+   color: var(--color2);
+} 

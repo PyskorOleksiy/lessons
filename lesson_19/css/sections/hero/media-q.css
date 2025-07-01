@@ -1,0 +1,11 @@
+@media (min-height: 44.125em) {
+   .hero {
+      min-height: 37.875rem;
+   }
+}
+
+@media (min-width: 47.0625em) {
+   .hero__blockquote {
+      font-size: 0.42857143em; /* 24/56 */
+   }
+}
