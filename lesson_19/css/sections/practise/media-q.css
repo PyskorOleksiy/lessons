@@ -1,0 +1,29 @@
+@media (min-width: 76.9375em) {
+   .practise {
+      padding-block: 2.5rem;
+   }
+   /*.practise__container {
+      gap: 40px;
+   }*/
+   .video__wrapper {
+      transform: translateX(calc((-100vw + var(--containerWidth)) / 2));
+   }
+   .practise__body[dir="rtl"] .video__wrapper {
+      transform: translateX(calc((100vw - var(--containerWidth)) / 2));
+   }
+   .practise__body[dir="auto"] .video__wrapper {
+      width: var(--containerWidth);
+   }
+}
+
+/*-------WRITING MODE-----------*/
+@media (min-width: 690px) {
+   /*.writing-mode {
+      padding-inline: 1.875rem;
+   }*/
+   .writing-mode__blockquotes--vertical>blockquote:first-of-type {
+      max-block-size: 37.5rem;
+   }
+}
+/*------------------------------*/
+
