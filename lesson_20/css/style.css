@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/*Очищення всіх стилів браузерів*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/*-------------CSS-ЗМІННІ------------*/
+/*:root {
+}*/
+/*-----------------------------------*/
+[class*=container] {
+  margin: 0 auto;
+  max-width: 73.125rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+@media (min-width: 75em) {
+  h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  h1 {
+    font-size: clamp( 20px , 1.8181818182px  +  5.6818181818vw , 70px );
+  }
+}
+@media (max-width: 20em) {
+  h1 {
+    font-size: 20px;
+  }
+}
