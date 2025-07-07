@@ -68,7 +68,7 @@ console.log(divide(NaN,"34px"))
 
 //ЗАДАЧА 5
 
-const array = [{name: "Denis", surname: "Bergkamp"}, 10, "АРІВІДЕРЧІ", "10", ["Республіка Фронтенд", "Королівство Бекенд", "Третій Дизайнерський Рейх", 10]]
+const array = [{name: "Denis", surname: "Bergkamp"}, 10, "Oh, man, I shot Marvin in the face", "10", ["Республіка Фронтенд", "Королівство Бекенд", "Третій Дизайнерський Рейх", 10]]
 
 if (Array.isArray(array) && array.length > 0) {
    array.forEach((element, index) => {
