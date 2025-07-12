@@ -1,0 +1,70 @@
+@use "../_global" as *;
+
+.hero {
+   padding-block: toRem(40);
+
+   &__container {
+      &>* {
+         margin-bottom: toRem(20);
+      }
+   }
+   &__text {
+      &>* {
+         display: block;
+      }
+      p:not(:last-child) {
+         margin-block-end: toRem(8);
+      }
+      *:not(p) {
+         margin-block: toRem(15);
+      }
+   }
+   &__cards {
+   }
+}
+.poker-cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(toRem(230), 1fr));
+   grid-auto-rows: toRem(350);
+   gap: toRem(20);
+}
+.item {
+   position: relative;
+   border-radius: 20px;
+   overflow: hidden;
+   cursor: pointer;
+
+   &.active {
+      .item__image {
+         &--front {
+            z-index: 1;
+         }
+      }
+   }
+
+   &__image {
+      height: 100%;
+
+      &--back {
+         img {
+            object-fit: fill;
+         }
+      }
+      &--front {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 60%;
+         height: 40%;
+         clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+         overflow: hidden;
+         z-index: -1;
+
+         img {
+            position: absolute;
+            object-fit: none;
+            object-position: right bottom;
+         }
+      }
+   }
+}
