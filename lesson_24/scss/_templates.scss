@@ -1,0 +1,22 @@
+%posAbs {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+%transformChange {
+   will-change: transform;
+	transition: transform 0.3s;
+}
+
+/*-------------FLEX-------------*/
+%flexColumn {
+   display: flex;
+   flex-direction: column;
+}
+%flexWrap {
+   display: flex;
+   flex-wrap: wrap;
+}
+/*----------------------------*/

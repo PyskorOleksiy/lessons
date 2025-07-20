@@ -1,0 +1,34 @@
+@use "../../_global" as *;
+
+
+.thanks {
+   @include adaptiveValue("padding-block", 50, 20);
+   min-height: 90svh;
+   align-content: center;
+   text-align: center;
+   background-color: #b0e1ca;
+
+   &__container {
+   }
+   &__title {
+      @include adaptiveValue("font-size", 70, 24);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: toEm(5,70);
+      color: #fff;
+      text-shadow: 5px 5px 15px #bc95be;
+      word-break: break-word;
+
+      &>span {
+      }
+      &>span:nth-of-type(odd) {
+         //transform: rotate(-35deg);
+         //rotate: -35deg;
+      }
+      &>span:nth-of-type(even) {
+         //transform: rotate(35deg);
+         //rotate: 35deg;
+         color: rgb(72, 67, 67);
+      }
+   }
+}
